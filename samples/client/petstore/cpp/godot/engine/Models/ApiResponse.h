@@ -33,6 +33,10 @@
 
 #include "core/object/ref_counted.h"
 
+#include "Integer.h"
+#include "String.h"
+#include "String.h"
+
 class ApiResponse : public RefCounted {
     GDCLASS(ApiResponse, RefCounted);
 

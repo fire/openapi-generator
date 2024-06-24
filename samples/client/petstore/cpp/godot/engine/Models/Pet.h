@@ -33,6 +33,13 @@
 
 #include "core/object/ref_counted.h"
 
+#include "Long.h"
+#include "Category.h"
+#include "String.h"
+#include "List.h"
+#include "List.h"
+#include "String.h"
+
 class Pet : public RefCounted {
     GDCLASS(Pet, RefCounted);
 

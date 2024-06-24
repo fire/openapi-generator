@@ -35,6 +35,14 @@
 
 {{#operations}}
 {{#operation}}
+{{#allParams}}
+#include "{{dataType}}.h"
+{{/allParams}}
+{{/operation}}
+{{/operations}}
+
+{{#operations}}
+{{#operation}}
 class {{classname}} : public RefCounted {
     GDCLASS({{classname}}, RefCounted);
 

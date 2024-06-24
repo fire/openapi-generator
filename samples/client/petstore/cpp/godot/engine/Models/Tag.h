@@ -33,6 +33,9 @@
 
 #include "core/object/ref_counted.h"
 
+#include "Long.h"
+#include "String.h"
+
 class Tag : public RefCounted {
     GDCLASS(Tag, RefCounted);
 

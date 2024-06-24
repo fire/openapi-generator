@@ -33,6 +33,20 @@
 
 #include "core/object/ref_counted.h"
 
+#include "Pet.h"
+#include "Long.h"
+#include "String.h"
+#include "List.h"
+#include "List.h"
+#include "Long.h"
+#include "Pet.h"
+#include "Long.h"
+#include "String.h"
+#include "String.h"
+#include "Long.h"
+#include "String.h"
+#include "File.h"
+
 class PetApi : public RefCounted {
     GDCLASS(PetApi, RefCounted);
 

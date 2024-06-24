@@ -35,6 +35,14 @@
 
 {{#models}}
 {{#model}}
+{{#vars}}
+#include "{{dataType}}.h"
+{{/vars}}
+{{/model}}
+{{/models}}
+
+{{#models}}
+{{#model}}
 class {{classname}} : public RefCounted {
     GDCLASS({{classname}}, RefCounted);
 

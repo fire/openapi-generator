@@ -33,6 +33,13 @@
 
 #include "core/object/ref_counted.h"
 
+#include "Long.h"
+#include "Long.h"
+#include "Integer.h"
+#include "Date.h"
+#include "String.h"
+#include "Boolean.h"
+
 class Order : public RefCounted {
     GDCLASS(Order, RefCounted);
 

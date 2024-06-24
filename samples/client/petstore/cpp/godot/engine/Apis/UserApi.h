@@ -33,6 +33,16 @@
 
 #include "core/object/ref_counted.h"
 
+#include "User.h"
+#include "List.h"
+#include "List.h"
+#include "String.h"
+#include "String.h"
+#include "String.h"
+#include "String.h"
+#include "String.h"
+#include "User.h"
+
 class UserApi : public RefCounted {
     GDCLASS(UserApi, RefCounted);
 
