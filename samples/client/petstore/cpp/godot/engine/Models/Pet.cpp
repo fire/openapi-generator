@@ -34,48 +34,48 @@ Long Pet::get_id() const {
     return id;
 }
 
-void Pet::set_id(Long value) {
-    id = value;
+void Pet::set_id(Long p_value) {
+    id = p_value;
 }
 
 Category Pet::get_category() const {
     return category;
 }
 
-void Pet::set_category(Category value) {
-    category = value;
+void Pet::set_category(Category p_value) {
+    category = p_value;
 }
 
 String Pet::get_name() const {
     return name;
 }
 
-void Pet::set_name(String value) {
-    name = value;
+void Pet::set_name(String p_value) {
+    name = p_value;
 }
 
 List Pet::get_photoUrls() const {
     return photoUrls;
 }
 
-void Pet::set_photoUrls(List value) {
-    photoUrls = value;
+void Pet::set_photoUrls(List p_value) {
+    photoUrls = p_value;
 }
 
 List Pet::get_tags() const {
     return tags;
 }
 
-void Pet::set_tags(List value) {
-    tags = value;
+void Pet::set_tags(List p_value) {
+    tags = p_value;
 }
 
 String Pet::get_status() const {
     return status;
 }
 
-void Pet::set_status(String value) {
-    status = value;
+void Pet::set_status(String p_value) {
+    status = p_value;
 }
 
 Pet::Pet() {

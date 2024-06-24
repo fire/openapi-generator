@@ -55,17 +55,17 @@ protected:
 
 public:
     Long get_id() const { return id; }
-    void set_id(Long value) { id = value; }
+    void set_id(Long p_value) { id = p_value; }
     Long get_petId() const { return petId; }
-    void set_petId(Long value) { petId = value; }
+    void set_petId(Long p_value) { petId = p_value; }
     Integer get_quantity() const { return quantity; }
-    void set_quantity(Integer value) { quantity = value; }
+    void set_quantity(Integer p_value) { quantity = p_value; }
     Date get_shipDate() const { return shipDate; }
-    void set_shipDate(Date value) { shipDate = value; }
+    void set_shipDate(Date p_value) { shipDate = p_value; }
     String get_status() const { return status; }
-    void set_status(String value) { status = value; }
+    void set_status(String p_value) { status = p_value; }
     Boolean get_complete() const { return complete; }
-    void set_complete(Boolean value) { complete = value; }
+    void set_complete(Boolean p_value) { complete = p_value; }
 
     Order() {}
     ~Order() {}

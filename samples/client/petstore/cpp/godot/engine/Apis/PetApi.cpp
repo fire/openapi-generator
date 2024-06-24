@@ -49,50 +49,50 @@ PetApi::~PetApi() {
     // destructor implementation
 }
 
-Pet PetApi::addPet(Pet pet) {
+Pet PetApi::addPet(Pet p_pet) {
     // method implementation with return
     Pet result;
     // TODO: compute result
     return result;
 }
 
-void PetApi::deletePet(Long petId, String apiKey) {
+void PetApi::deletePet(Long p_petId, String p_apiKey) {
     // method implementation for void return
 }
 
-List PetApi::findPetsByStatus(List status) {
+List PetApi::findPetsByStatus(List p_status) {
     // method implementation with return
     List result;
     // TODO: compute result
     return result;
 }
 
-List PetApi::findPetsByTags(List tags) {
+List PetApi::findPetsByTags(List p_tags) {
     // method implementation with return
     List result;
     // TODO: compute result
     return result;
 }
 
-Pet PetApi::getPetById(Long petId) {
+Pet PetApi::getPetById(Long p_petId) {
     // method implementation with return
     Pet result;
     // TODO: compute result
     return result;
 }
 
-Pet PetApi::updatePet(Pet pet) {
+Pet PetApi::updatePet(Pet p_pet) {
     // method implementation with return
     Pet result;
     // TODO: compute result
     return result;
 }
 
-void PetApi::updatePetWithForm(Long petId, String name, String status) {
+void PetApi::updatePetWithForm(Long p_petId, String p_name, String p_status) {
     // method implementation for void return
 }
 
-ApiResponse PetApi::uploadFile(Long petId, String additionalMetadata, File file) {
+ApiResponse PetApi::uploadFile(Long p_petId, String p_additionalMetadata, File p_file) {
     // method implementation with return
     ApiResponse result;
     // TODO: compute result

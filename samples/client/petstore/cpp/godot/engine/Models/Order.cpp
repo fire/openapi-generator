@@ -34,48 +34,48 @@ Long Order::get_id() const {
     return id;
 }
 
-void Order::set_id(Long value) {
-    id = value;
+void Order::set_id(Long p_value) {
+    id = p_value;
 }
 
 Long Order::get_petId() const {
     return petId;
 }
 
-void Order::set_petId(Long value) {
-    petId = value;
+void Order::set_petId(Long p_value) {
+    petId = p_value;
 }
 
 Integer Order::get_quantity() const {
     return quantity;
 }
 
-void Order::set_quantity(Integer value) {
-    quantity = value;
+void Order::set_quantity(Integer p_value) {
+    quantity = p_value;
 }
 
 Date Order::get_shipDate() const {
     return shipDate;
 }
 
-void Order::set_shipDate(Date value) {
-    shipDate = value;
+void Order::set_shipDate(Date p_value) {
+    shipDate = p_value;
 }
 
 String Order::get_status() const {
     return status;
 }
 
-void Order::set_status(String value) {
-    status = value;
+void Order::set_status(String p_value) {
+    status = p_value;
 }
 
 Boolean Order::get_complete() const {
     return complete;
 }
 
-void Order::set_complete(Boolean value) {
-    complete = value;
+void Order::set_complete(Boolean p_value) {
+    complete = p_value;
 }
 
 Order::Order() {

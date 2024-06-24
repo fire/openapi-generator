@@ -49,30 +49,30 @@ UserApi::~UserApi() {
     // destructor implementation
 }
 
-void UserApi::createUser(User user) {
+void UserApi::createUser(User p_user) {
     // method implementation for void return
 }
 
-void UserApi::createUsersWithArrayInput(List user) {
+void UserApi::createUsersWithArrayInput(List p_user) {
     // method implementation for void return
 }
 
-void UserApi::createUsersWithListInput(List user) {
+void UserApi::createUsersWithListInput(List p_user) {
     // method implementation for void return
 }
 
-void UserApi::deleteUser(String username) {
+void UserApi::deleteUser(String p_username) {
     // method implementation for void return
 }
 
-User UserApi::getUserByName(String username) {
+User UserApi::getUserByName(String p_username) {
     // method implementation with return
     User result;
     // TODO: compute result
     return result;
 }
 
-String UserApi::loginUser(String username, String password) {
+String UserApi::loginUser(String p_username, String p_password) {
     // method implementation with return
     String result;
     // TODO: compute result
@@ -83,7 +83,7 @@ void UserApi::logoutUser() {
     // method implementation for void return
 }
 
-void UserApi::updateUser(String username, User user) {
+void UserApi::updateUser(String p_username, User p_user) {
     // method implementation for void return
 }
 

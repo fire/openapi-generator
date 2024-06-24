@@ -34,24 +34,24 @@ Integer ApiResponse::get_code() const {
     return code;
 }
 
-void ApiResponse::set_code(Integer value) {
-    code = value;
+void ApiResponse::set_code(Integer p_value) {
+    code = p_value;
 }
 
 String ApiResponse::get_type() const {
     return type;
 }
 
-void ApiResponse::set_type(String value) {
-    type = value;
+void ApiResponse::set_type(String p_value) {
+    type = p_value;
 }
 
 String ApiResponse::get_message() const {
     return message;
 }
 
-void ApiResponse::set_message(String value) {
-    message = value;
+void ApiResponse::set_message(String p_value) {
+    message = p_value;
 }
 
 ApiResponse::ApiResponse() {

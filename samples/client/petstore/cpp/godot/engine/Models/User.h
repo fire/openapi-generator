@@ -59,21 +59,21 @@ protected:
 
 public:
     Long get_id() const { return id; }
-    void set_id(Long value) { id = value; }
+    void set_id(Long p_value) { id = p_value; }
     String get_username() const { return username; }
-    void set_username(String value) { username = value; }
+    void set_username(String p_value) { username = p_value; }
     String get_firstName() const { return firstName; }
-    void set_firstName(String value) { firstName = value; }
+    void set_firstName(String p_value) { firstName = p_value; }
     String get_lastName() const { return lastName; }
-    void set_lastName(String value) { lastName = value; }
+    void set_lastName(String p_value) { lastName = p_value; }
     String get_email() const { return email; }
-    void set_email(String value) { email = value; }
+    void set_email(String p_value) { email = p_value; }
     String get_password() const { return password; }
-    void set_password(String value) { password = value; }
+    void set_password(String p_value) { password = p_value; }
     String get_phone() const { return phone; }
-    void set_phone(String value) { phone = value; }
+    void set_phone(String p_value) { phone = p_value; }
     Integer get_userStatus() const { return userStatus; }
-    void set_userStatus(Integer value) { userStatus = value; }
+    void set_userStatus(Integer p_value) { userStatus = p_value; }
 
     User() {}
     ~User() {}

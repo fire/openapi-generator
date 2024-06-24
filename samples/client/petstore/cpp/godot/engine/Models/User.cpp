@@ -34,64 +34,64 @@ Long User::get_id() const {
     return id;
 }
 
-void User::set_id(Long value) {
-    id = value;
+void User::set_id(Long p_value) {
+    id = p_value;
 }
 
 String User::get_username() const {
     return username;
 }
 
-void User::set_username(String value) {
-    username = value;
+void User::set_username(String p_value) {
+    username = p_value;
 }
 
 String User::get_firstName() const {
     return firstName;
 }
 
-void User::set_firstName(String value) {
-    firstName = value;
+void User::set_firstName(String p_value) {
+    firstName = p_value;
 }
 
 String User::get_lastName() const {
     return lastName;
 }
 
-void User::set_lastName(String value) {
-    lastName = value;
+void User::set_lastName(String p_value) {
+    lastName = p_value;
 }
 
 String User::get_email() const {
     return email;
 }
 
-void User::set_email(String value) {
-    email = value;
+void User::set_email(String p_value) {
+    email = p_value;
 }
 
 String User::get_password() const {
     return password;
 }
 
-void User::set_password(String value) {
-    password = value;
+void User::set_password(String p_value) {
+    password = p_value;
 }
 
 String User::get_phone() const {
     return phone;
 }
 
-void User::set_phone(String value) {
-    phone = value;
+void User::set_phone(String p_value) {
+    phone = p_value;
 }
 
 Integer User::get_userStatus() const {
     return userStatus;
 }
 
-void User::set_userStatus(Integer value) {
-    userStatus = value;
+void User::set_userStatus(Integer p_value) {
+    userStatus = p_value;
 }
 
 User::User() {

@@ -34,16 +34,16 @@ Long Tag::get_id() const {
     return id;
 }
 
-void Tag::set_id(Long value) {
-    id = value;
+void Tag::set_id(Long p_value) {
+    id = p_value;
 }
 
 String Tag::get_name() const {
     return name;
 }
 
-void Tag::set_name(String value) {
-    name = value;
+void Tag::set_name(String p_value) {
+    name = p_value;
 }
 
 Tag::Tag() {

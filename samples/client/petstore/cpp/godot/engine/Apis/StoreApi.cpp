@@ -45,7 +45,7 @@ StoreApi::~StoreApi() {
     // destructor implementation
 }
 
-void StoreApi::deleteOrder(String orderId) {
+void StoreApi::deleteOrder(String p_orderId) {
     // method implementation for void return
 }
 
@@ -56,14 +56,14 @@ Map StoreApi::getInventory() {
     return result;
 }
 
-Order StoreApi::getOrderById(Long orderId) {
+Order StoreApi::getOrderById(Long p_orderId) {
     // method implementation with return
     Order result;
     // TODO: compute result
     return result;
 }
 
-Order StoreApi::placeOrder(Order order) {
+Order StoreApi::placeOrder(Order p_order) {
     // method implementation with return
     Order result;
     // TODO: compute result

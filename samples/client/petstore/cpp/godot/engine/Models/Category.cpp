@@ -34,16 +34,16 @@ Long Category::get_id() const {
     return id;
 }
 
-void Category::set_id(Long value) {
-    id = value;
+void Category::set_id(Long p_value) {
+    id = p_value;
 }
 
 String Category::get_name() const {
     return name;
 }
 
-void Category::set_name(String value) {
-    name = value;
+void Category::set_name(String p_value) {
+    name = p_value;
 }
 
 Category::Category() {

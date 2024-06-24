@@ -49,7 +49,7 @@ public:
     StoreApi();
     ~StoreApi();
 
-    void deleteOrder(String orderId);
+    void deleteOrder(String p_orderId);
 };
 
 class StoreApi : public RefCounted {
@@ -78,7 +78,7 @@ public:
     StoreApi();
     ~StoreApi();
 
-    Order getOrderById(Long orderId);
+    Order getOrderById(Long p_orderId);
 };
 
 class StoreApi : public RefCounted {
@@ -93,7 +93,7 @@ public:
     StoreApi();
     ~StoreApi();
 
-    Order placeOrder(Order order);
+    Order placeOrder(Order p_order);
 };
 
 #endif // STOREAPI_H

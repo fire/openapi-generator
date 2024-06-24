@@ -55,7 +55,7 @@ public:
     UserApi();
     ~UserApi();
 
-    void createUser(User user);
+    void createUser(User p_user);
 };
 
 class UserApi : public RefCounted {
@@ -70,7 +70,7 @@ public:
     UserApi();
     ~UserApi();
 
-    void createUsersWithArrayInput(List user);
+    void createUsersWithArrayInput(List p_user);
 };
 
 class UserApi : public RefCounted {
@@ -85,7 +85,7 @@ public:
     UserApi();
     ~UserApi();
 
-    void createUsersWithListInput(List user);
+    void createUsersWithListInput(List p_user);
 };
 
 class UserApi : public RefCounted {
@@ -100,7 +100,7 @@ public:
     UserApi();
     ~UserApi();
 
-    void deleteUser(String username);
+    void deleteUser(String p_username);
 };
 
 class UserApi : public RefCounted {
@@ -115,7 +115,7 @@ public:
     UserApi();
     ~UserApi();
 
-    User getUserByName(String username);
+    User getUserByName(String p_username);
 };
 
 class UserApi : public RefCounted {
@@ -131,7 +131,7 @@ public:
     UserApi();
     ~UserApi();
 
-    String loginUser(String username, String password);
+    String loginUser(String p_username, String p_password);
 };
 
 class UserApi : public RefCounted {
@@ -161,7 +161,7 @@ public:
     UserApi();
     ~UserApi();
 
-    void updateUser(String username, User user);
+    void updateUser(String p_username, User p_user);
 };
 
 #endif // USERAPI_H

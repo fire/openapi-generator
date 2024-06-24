@@ -55,17 +55,17 @@ protected:
 
 public:
     Long get_id() const { return id; }
-    void set_id(Long value) { id = value; }
+    void set_id(Long p_value) { id = p_value; }
     Category get_category() const { return category; }
-    void set_category(Category value) { category = value; }
+    void set_category(Category p_value) { category = p_value; }
     String get_name() const { return name; }
-    void set_name(String value) { name = value; }
+    void set_name(String p_value) { name = p_value; }
     List get_photoUrls() const { return photoUrls; }
-    void set_photoUrls(List value) { photoUrls = value; }
+    void set_photoUrls(List p_value) { photoUrls = p_value; }
     List get_tags() const { return tags; }
-    void set_tags(List value) { tags = value; }
+    void set_tags(List p_value) { tags = p_value; }
     String get_status() const { return status; }
-    void set_status(String value) { status = value; }
+    void set_status(String p_value) { status = p_value; }
 
     Pet() {}
     ~Pet() {}

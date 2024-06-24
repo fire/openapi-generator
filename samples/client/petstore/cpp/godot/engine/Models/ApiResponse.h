@@ -49,11 +49,11 @@ protected:
 
 public:
     Integer get_code() const { return code; }
-    void set_code(Integer value) { code = value; }
+    void set_code(Integer p_value) { code = p_value; }
     String get_type() const { return type; }
-    void set_type(String value) { type = value; }
+    void set_type(String p_value) { type = p_value; }
     String get_message() const { return message; }
-    void set_message(String value) { message = value; }
+    void set_message(String p_value) { message = p_value; }
 
     ApiResponse() {}
     ~ApiResponse() {}

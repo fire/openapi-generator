@@ -47,9 +47,9 @@ protected:
 
 public:
     Long get_id() const { return id; }
-    void set_id(Long value) { id = value; }
+    void set_id(Long p_value) { id = p_value; }
     String get_name() const { return name; }
-    void set_name(String value) { name = value; }
+    void set_name(String p_value) { name = p_value; }
 
     Category() {}
     ~Category() {}

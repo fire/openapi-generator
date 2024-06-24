@@ -56,7 +56,7 @@ protected:
 public:
     {{#vars}}
     {{dataType}} get_{{name}}() const { return {{name}}; }
-    void set_{{name}}({{dataType}} value) { {{name}} = value; }
+    void set_{{name}}({{dataType}} p_value) { {{name}} = p_value; }
     {{/vars}}
 
     {{classname}}() {}

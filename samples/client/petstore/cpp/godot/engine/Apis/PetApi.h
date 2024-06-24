@@ -59,7 +59,7 @@ public:
     PetApi();
     ~PetApi();
 
-    Pet addPet(Pet pet);
+    Pet addPet(Pet p_pet);
 };
 
 class PetApi : public RefCounted {
@@ -75,7 +75,7 @@ public:
     PetApi();
     ~PetApi();
 
-    void deletePet(Long petId, String apiKey);
+    void deletePet(Long p_petId, String p_apiKey);
 };
 
 class PetApi : public RefCounted {
@@ -90,7 +90,7 @@ public:
     PetApi();
     ~PetApi();
 
-    List findPetsByStatus(List status);
+    List findPetsByStatus(List p_status);
 };
 
 class PetApi : public RefCounted {
@@ -105,7 +105,7 @@ public:
     PetApi();
     ~PetApi();
 
-    List findPetsByTags(List tags);
+    List findPetsByTags(List p_tags);
 };
 
 class PetApi : public RefCounted {
@@ -120,7 +120,7 @@ public:
     PetApi();
     ~PetApi();
 
-    Pet getPetById(Long petId);
+    Pet getPetById(Long p_petId);
 };
 
 class PetApi : public RefCounted {
@@ -135,7 +135,7 @@ public:
     PetApi();
     ~PetApi();
 
-    Pet updatePet(Pet pet);
+    Pet updatePet(Pet p_pet);
 };
 
 class PetApi : public RefCounted {
@@ -152,7 +152,7 @@ public:
     PetApi();
     ~PetApi();
 
-    void updatePetWithForm(Long petId, String name, String status);
+    void updatePetWithForm(Long p_petId, String p_name, String p_status);
 };
 
 class PetApi : public RefCounted {
@@ -169,7 +169,7 @@ public:
     PetApi();
     ~PetApi();
 
-    ApiResponse uploadFile(Long petId, String additionalMetadata, File file);
+    ApiResponse uploadFile(Long p_petId, String p_additionalMetadata, File p_file);
 };
 
 #endif // PETAPI_H
