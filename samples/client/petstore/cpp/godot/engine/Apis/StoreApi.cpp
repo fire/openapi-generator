@@ -28,6 +28,8 @@
 /* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                 */
 /**************************************************************************/
 
+#include "StoreApi.h"
+
 void StoreApi::_bind_methods() {
     ClassDB::bind_method(D_METHOD("deleteOrder", "orderId"), &StoreApi::deleteOrder);
     ClassDB::bind_method(D_METHOD("getInventory", ""), &StoreApi::getInventory);

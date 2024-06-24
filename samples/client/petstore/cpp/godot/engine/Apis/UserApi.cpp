@@ -28,6 +28,8 @@
 /* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                 */
 /**************************************************************************/
 
+#include "UserApi.h"
+
 void UserApi::_bind_methods() {
     ClassDB::bind_method(D_METHOD("createUser", "user"), &UserApi::createUser);
     ClassDB::bind_method(D_METHOD("createUsersWithArrayInput", "user"), &UserApi::createUsersWithArrayInput);

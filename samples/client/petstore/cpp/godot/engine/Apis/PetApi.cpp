@@ -28,6 +28,8 @@
 /* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                 */
 /**************************************************************************/
 
+#include "PetApi.h"
+
 void PetApi::_bind_methods() {
     ClassDB::bind_method(D_METHOD("addPet", "pet"), &PetApi::addPet);
     ClassDB::bind_method(D_METHOD("deletePet", "petId, apiKey"), &PetApi::deletePet);
