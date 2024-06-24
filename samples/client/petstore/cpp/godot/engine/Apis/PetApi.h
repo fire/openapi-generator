@@ -50,7 +50,6 @@
 class PetApi : public RefCounted {
     GDCLASS(PetApi, RefCounted);
 
-    Pet pet;
 
 protected:
     static void _bind_methods();
@@ -60,115 +59,12 @@ public:
     ~PetApi();
 
     Pet addPet(Pet p_pet);
-};
-
-class PetApi : public RefCounted {
-    GDCLASS(PetApi, RefCounted);
-
-    Long petId;
-    String apiKey;
-
-protected:
-    static void _bind_methods();
-
-public:
-    PetApi();
-    ~PetApi();
-
     void deletePet(Long p_petId, String p_apiKey);
-};
-
-class PetApi : public RefCounted {
-    GDCLASS(PetApi, RefCounted);
-
-    List status;
-
-protected:
-    static void _bind_methods();
-
-public:
-    PetApi();
-    ~PetApi();
-
     List findPetsByStatus(List p_status);
-};
-
-class PetApi : public RefCounted {
-    GDCLASS(PetApi, RefCounted);
-
-    List tags;
-
-protected:
-    static void _bind_methods();
-
-public:
-    PetApi();
-    ~PetApi();
-
     List findPetsByTags(List p_tags);
-};
-
-class PetApi : public RefCounted {
-    GDCLASS(PetApi, RefCounted);
-
-    Long petId;
-
-protected:
-    static void _bind_methods();
-
-public:
-    PetApi();
-    ~PetApi();
-
     Pet getPetById(Long p_petId);
-};
-
-class PetApi : public RefCounted {
-    GDCLASS(PetApi, RefCounted);
-
-    Pet pet;
-
-protected:
-    static void _bind_methods();
-
-public:
-    PetApi();
-    ~PetApi();
-
     Pet updatePet(Pet p_pet);
-};
-
-class PetApi : public RefCounted {
-    GDCLASS(PetApi, RefCounted);
-
-    Long petId;
-    String name;
-    String status;
-
-protected:
-    static void _bind_methods();
-
-public:
-    PetApi();
-    ~PetApi();
-
     void updatePetWithForm(Long p_petId, String p_name, String p_status);
-};
-
-class PetApi : public RefCounted {
-    GDCLASS(PetApi, RefCounted);
-
-    Long petId;
-    String additionalMetadata;
-    File file;
-
-protected:
-    static void _bind_methods();
-
-public:
-    PetApi();
-    ~PetApi();
-
     ApiResponse uploadFile(Long p_petId, String p_additionalMetadata, File p_file);
 };
 

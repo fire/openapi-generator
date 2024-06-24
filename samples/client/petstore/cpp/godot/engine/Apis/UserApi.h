@@ -46,7 +46,6 @@
 class UserApi : public RefCounted {
     GDCLASS(UserApi, RefCounted);
 
-    User user;
 
 protected:
     static void _bind_methods();
@@ -56,111 +55,12 @@ public:
     ~UserApi();
 
     void createUser(User p_user);
-};
-
-class UserApi : public RefCounted {
-    GDCLASS(UserApi, RefCounted);
-
-    List user;
-
-protected:
-    static void _bind_methods();
-
-public:
-    UserApi();
-    ~UserApi();
-
     void createUsersWithArrayInput(List p_user);
-};
-
-class UserApi : public RefCounted {
-    GDCLASS(UserApi, RefCounted);
-
-    List user;
-
-protected:
-    static void _bind_methods();
-
-public:
-    UserApi();
-    ~UserApi();
-
     void createUsersWithListInput(List p_user);
-};
-
-class UserApi : public RefCounted {
-    GDCLASS(UserApi, RefCounted);
-
-    String username;
-
-protected:
-    static void _bind_methods();
-
-public:
-    UserApi();
-    ~UserApi();
-
     void deleteUser(String p_username);
-};
-
-class UserApi : public RefCounted {
-    GDCLASS(UserApi, RefCounted);
-
-    String username;
-
-protected:
-    static void _bind_methods();
-
-public:
-    UserApi();
-    ~UserApi();
-
     User getUserByName(String p_username);
-};
-
-class UserApi : public RefCounted {
-    GDCLASS(UserApi, RefCounted);
-
-    String username;
-    String password;
-
-protected:
-    static void _bind_methods();
-
-public:
-    UserApi();
-    ~UserApi();
-
     String loginUser(String p_username, String p_password);
-};
-
-class UserApi : public RefCounted {
-    GDCLASS(UserApi, RefCounted);
-
-
-protected:
-    static void _bind_methods();
-
-public:
-    UserApi();
-    ~UserApi();
-
     void logoutUser();
-};
-
-class UserApi : public RefCounted {
-    GDCLASS(UserApi, RefCounted);
-
-    String username;
-    User user;
-
-protected:
-    static void _bind_methods();
-
-public:
-    UserApi();
-    ~UserApi();
-
     void updateUser(String p_username, User p_user);
 };
 

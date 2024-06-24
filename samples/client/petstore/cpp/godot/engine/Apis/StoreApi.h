@@ -40,7 +40,6 @@
 class StoreApi : public RefCounted {
     GDCLASS(StoreApi, RefCounted);
 
-    String orderId;
 
 protected:
     static void _bind_methods();
@@ -50,49 +49,8 @@ public:
     ~StoreApi();
 
     void deleteOrder(String p_orderId);
-};
-
-class StoreApi : public RefCounted {
-    GDCLASS(StoreApi, RefCounted);
-
-
-protected:
-    static void _bind_methods();
-
-public:
-    StoreApi();
-    ~StoreApi();
-
     Map getInventory();
-};
-
-class StoreApi : public RefCounted {
-    GDCLASS(StoreApi, RefCounted);
-
-    Long orderId;
-
-protected:
-    static void _bind_methods();
-
-public:
-    StoreApi();
-    ~StoreApi();
-
     Order getOrderById(Long p_orderId);
-};
-
-class StoreApi : public RefCounted {
-    GDCLASS(StoreApi, RefCounted);
-
-    Order order;
-
-protected:
-    static void _bind_methods();
-
-public:
-    StoreApi();
-    ~StoreApi();
-
     Order placeOrder(Order p_order);
 };
 

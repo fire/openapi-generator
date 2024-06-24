@@ -42,7 +42,6 @@
 {{/operations}}
 
 {{#operations}}
-{{#operation}}
 class {{classname}} : public RefCounted {
     GDCLASS({{classname}}, RefCounted);
 
@@ -57,9 +56,10 @@ public:
     {{classname}}();
     ~{{classname}}();
 
+{{#operation}}
     {{#returnType}}{{returnType}}{{/returnType}}{{^returnType}}void{{/returnType}} {{operationId}}({{#allParams}}{{dataType}} p_{{paramName}}{{^-last}}, {{/-last}}{{/allParams}});
+{{/operation}}
 };
 
-{{/operation}}
 {{/operations}}
 #endif // {{#lambda.uppercase}}{{classname}}{{/lambda.uppercase}}_H
