@@ -46,14 +46,23 @@ StoreApi::~StoreApi() {
 }
 
 void StoreApi::deleteOrder(String orderId) {
-    // method implementation
+    // method implementation for void return
 }
 Map StoreApi::getInventory() {
-    // method implementation
+    // method implementation with return
+    Map result;
+    // TODO: compute result
+    return result;
 }
 Order StoreApi::getOrderById(Long orderId) {
-    // method implementation
+    // method implementation with return
+    Order result;
+    // TODO: compute result
+    return result;
 }
 Order StoreApi::placeOrder(Order order) {
-    // method implementation
+    // method implementation with return
+    Order result;
+    // TODO: compute result
+    return result;
 }

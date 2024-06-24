@@ -50,26 +50,32 @@ UserApi::~UserApi() {
 }
 
 void UserApi::createUser(User user) {
-    // method implementation
+    // method implementation for void return
 }
 void UserApi::createUsersWithArrayInput(List user) {
-    // method implementation
+    // method implementation for void return
 }
 void UserApi::createUsersWithListInput(List user) {
-    // method implementation
+    // method implementation for void return
 }
 void UserApi::deleteUser(String username) {
-    // method implementation
+    // method implementation for void return
 }
 User UserApi::getUserByName(String username) {
-    // method implementation
+    // method implementation with return
+    User result;
+    // TODO: compute result
+    return result;
 }
 String UserApi::loginUser(String username, String password) {
-    // method implementation
+    // method implementation with return
+    String result;
+    // TODO: compute result
+    return result;
 }
 void UserApi::logoutUser() {
-    // method implementation
+    // method implementation for void return
 }
 void UserApi::updateUser(String username, User user) {
-    // method implementation
+    // method implementation for void return
 }

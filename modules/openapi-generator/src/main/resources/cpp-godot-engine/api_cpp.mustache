@@ -49,7 +49,15 @@ void {{classname}}::_bind_methods() {
 {{#operations}}
 {{#operation}}
 {{#returnType}}{{returnType}}{{/returnType}}{{^returnType}}void{{/returnType}} {{classname}}::{{operationId}}({{#allParams}}{{dataType}} {{paramName}}{{^-last}}, {{/-last}}{{/allParams}}) {
-    // method implementation
+    {{#returnType}}
+    // method implementation with return
+    {{returnType}} result;
+    // TODO: compute result
+    return result;
+    {{/returnType}}
+    {{^returnType}}
+    // method implementation for void return
+    {{/returnType}}
 }
 {{/operation}}
 {{/operations}}
