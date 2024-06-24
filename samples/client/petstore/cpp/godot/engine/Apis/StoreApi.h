@@ -58,7 +58,7 @@ public:
     StoreApi();
     ~StoreApi();
 
-    void getInventory();
+    Map getInventory();
 };
 class StoreApi : public RefCounted {
     GDCLASS(StoreApi, RefCounted);
@@ -72,7 +72,7 @@ public:
     StoreApi();
     ~StoreApi();
 
-    void getOrderById(Long orderId);
+    Order getOrderById(Long orderId);
 };
 class StoreApi : public RefCounted {
     GDCLASS(StoreApi, RefCounted);
@@ -86,7 +86,7 @@ public:
     StoreApi();
     ~StoreApi();
 
-    void placeOrder(Order order);
+    Order placeOrder(Order order);
 };
 
 #endif // STOREAPI_H

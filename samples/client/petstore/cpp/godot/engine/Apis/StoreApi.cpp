@@ -48,16 +48,12 @@ StoreApi::~StoreApi() {
 void StoreApi::deleteOrder(String orderId) {
     // method implementation
 }
-
-void StoreApi::getInventory() {
+Map StoreApi::getInventory() {
     // method implementation
 }
-
-void StoreApi::getOrderById(Long orderId) {
+Order StoreApi::getOrderById(Long orderId) {
     // method implementation
 }
-
-void StoreApi::placeOrder(Order order) {
+Order StoreApi::placeOrder(Order order) {
     // method implementation
 }
-

@@ -38,7 +38,6 @@ void {{classname}}::_bind_methods() {
 {{/operations}}
 }
 
-{{#operations}}
 {{classname}}::{{classname}}() {
     // constructor implementation
 }
@@ -47,10 +46,10 @@ void {{classname}}::_bind_methods() {
     // destructor implementation
 }
 
+{{#operations}}
 {{#operation}}
-void {{classname}}::{{operationId}}({{#allParams}}{{dataType}} {{paramName}}{{^-last}}, {{/-last}}{{/allParams}}) {
+{{#returnType}}{{returnType}}{{/returnType}}{{^returnType}}void{{/returnType}} {{classname}}::{{operationId}}({{#allParams}}{{dataType}} {{paramName}}{{^-last}}, {{/-last}}{{/allParams}}) {
     // method implementation
 }
-
 {{/operation}}
 {{/operations}}

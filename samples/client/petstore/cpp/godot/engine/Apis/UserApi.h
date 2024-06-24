@@ -101,7 +101,7 @@ public:
     UserApi();
     ~UserApi();
 
-    void getUserByName(String username);
+    User getUserByName(String username);
 };
 class UserApi : public RefCounted {
     GDCLASS(UserApi, RefCounted);
@@ -116,7 +116,7 @@ public:
     UserApi();
     ~UserApi();
 
-    void loginUser(String username, String password);
+    String loginUser(String username, String password);
 };
 class UserApi : public RefCounted {
     GDCLASS(UserApi, RefCounted);

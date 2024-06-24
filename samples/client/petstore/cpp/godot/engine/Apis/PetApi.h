@@ -45,7 +45,7 @@ public:
     PetApi();
     ~PetApi();
 
-    void addPet(Pet pet);
+    Pet addPet(Pet pet);
 };
 class PetApi : public RefCounted {
     GDCLASS(PetApi, RefCounted);
@@ -74,7 +74,7 @@ public:
     PetApi();
     ~PetApi();
 
-    void findPetsByStatus(List status);
+    List findPetsByStatus(List status);
 };
 class PetApi : public RefCounted {
     GDCLASS(PetApi, RefCounted);
@@ -88,7 +88,7 @@ public:
     PetApi();
     ~PetApi();
 
-    void findPetsByTags(List tags);
+    List findPetsByTags(List tags);
 };
 class PetApi : public RefCounted {
     GDCLASS(PetApi, RefCounted);
@@ -102,7 +102,7 @@ public:
     PetApi();
     ~PetApi();
 
-    void getPetById(Long petId);
+    Pet getPetById(Long petId);
 };
 class PetApi : public RefCounted {
     GDCLASS(PetApi, RefCounted);
@@ -116,7 +116,7 @@ public:
     PetApi();
     ~PetApi();
 
-    void updatePet(Pet pet);
+    Pet updatePet(Pet pet);
 };
 class PetApi : public RefCounted {
     GDCLASS(PetApi, RefCounted);
@@ -148,7 +148,7 @@ public:
     PetApi();
     ~PetApi();
 
-    void uploadFile(Long petId, String additionalMetadata, File file);
+    ApiResponse uploadFile(Long petId, String additionalMetadata, File file);
 };
 
 #endif // PETAPI_H

@@ -49,35 +49,27 @@ PetApi::~PetApi() {
     // destructor implementation
 }
 
-void PetApi::addPet(Pet pet) {
+Pet PetApi::addPet(Pet pet) {
     // method implementation
 }
-
 void PetApi::deletePet(Long petId, String apiKey) {
     // method implementation
 }
-
-void PetApi::findPetsByStatus(List status) {
+List PetApi::findPetsByStatus(List status) {
     // method implementation
 }
-
-void PetApi::findPetsByTags(List tags) {
+List PetApi::findPetsByTags(List tags) {
     // method implementation
 }
-
-void PetApi::getPetById(Long petId) {
+Pet PetApi::getPetById(Long petId) {
     // method implementation
 }
-
-void PetApi::updatePet(Pet pet) {
+Pet PetApi::updatePet(Pet pet) {
     // method implementation
 }
-
 void PetApi::updatePetWithForm(Long petId, String name, String status) {
     // method implementation
 }
-
-void PetApi::uploadFile(Long petId, String additionalMetadata, File file) {
+ApiResponse PetApi::uploadFile(Long petId, String additionalMetadata, File file) {
     // method implementation
 }
-

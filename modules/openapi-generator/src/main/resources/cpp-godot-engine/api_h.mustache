@@ -49,7 +49,7 @@ public:
     {{classname}}();
     ~{{classname}}();
 
-    void {{operationId}}({{#allParams}}{{dataType}} {{paramName}}{{^-last}}, {{/-last}}{{/allParams}});
+    {{#returnType}}{{returnType}}{{/returnType}}{{^returnType}}void{{/returnType}} {{operationId}}({{#allParams}}{{dataType}} {{paramName}}{{^-last}}, {{/-last}}{{/allParams}});
 };
 {{/operation}}
 {{/operations}}

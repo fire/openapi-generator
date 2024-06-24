@@ -52,32 +52,24 @@ UserApi::~UserApi() {
 void UserApi::createUser(User user) {
     // method implementation
 }
-
 void UserApi::createUsersWithArrayInput(List user) {
     // method implementation
 }
-
 void UserApi::createUsersWithListInput(List user) {
     // method implementation
 }
-
 void UserApi::deleteUser(String username) {
     // method implementation
 }
-
-void UserApi::getUserByName(String username) {
+User UserApi::getUserByName(String username) {
     // method implementation
 }
-
-void UserApi::loginUser(String username, String password) {
+String UserApi::loginUser(String username, String password) {
     // method implementation
 }
-
 void UserApi::logoutUser() {
     // method implementation
 }
-
 void UserApi::updateUser(String username, User user) {
     // method implementation
 }
-
