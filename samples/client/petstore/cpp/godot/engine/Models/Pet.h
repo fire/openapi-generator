@@ -1,5 +1,5 @@
 /**************************************************************************/
-/*  register_types.cpp                                                    */
+/*  register_types.h                                                      */
 /**************************************************************************/
 /*                         This file is part of:                          */
 /*                             GODOT ENGINE                               */
@@ -28,24 +28,39 @@
 /* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                 */
 /**************************************************************************/
 
-#include "register_types.h"
+#ifndef PET_H
+#define PET_H
 
-#include "core/object/class_db.h"
-#include "{{app_name}}.h"
+#include "core/object/ref_counted.h"
 
-void initialize_{{app_name}}_module(ModuleInitializationLevel p_level) {
-	if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
-			return;
-	}
-    {{#models}}
-    {{#model}}
-    ClassDB::register_class<{{name}}>();
-    {{/model}}
-    {{/models}}
-}
+class Pet : public RefCounted {
+    GDCLASS(Pet, RefCounted);
 
-void uninitialize_{{app_name}}_module(ModuleInitializationLevel p_level) {
-	if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
-			return;
-	}
-}
+    Long id;
+    Category category;
+    String name;
+    List photoUrls;
+    List tags;
+    String status;
+
+protected:
+    static void _bind_methods() {}
+
+public:
+    Long get_id() const { return id; }
+    void set_id(Long value) { id = value; }
+    Category get_category() const { return category; }
+    void set_category(Category value) { category = value; }
+    String get_name() const { return name; }
+    void set_name(String value) { name = value; }
+    List get_photoUrls() const { return photoUrls; }
+    void set_photoUrls(List value) { photoUrls = value; }
+    List get_tags() const { return tags; }
+    void set_tags(List value) { tags = value; }
+    String get_status() const { return status; }
+    void set_status(String value) { status = value; }
+
+    Pet();
+};
+
+#endif // PET_H

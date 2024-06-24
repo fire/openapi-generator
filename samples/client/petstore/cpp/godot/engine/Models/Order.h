@@ -1,5 +1,5 @@
 /**************************************************************************/
-/*  register_types.cpp                                                    */
+/*  register_types.h                                                      */
 /**************************************************************************/
 /*                         This file is part of:                          */
 /*                             GODOT ENGINE                               */
@@ -28,24 +28,39 @@
 /* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                 */
 /**************************************************************************/
 
-#include "register_types.h"
+#ifndef ORDER_H
+#define ORDER_H
 
-#include "core/object/class_db.h"
-#include "{{app_name}}.h"
+#include "core/object/ref_counted.h"
 
-void initialize_{{app_name}}_module(ModuleInitializationLevel p_level) {
-	if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
-			return;
-	}
-    {{#models}}
-    {{#model}}
-    ClassDB::register_class<{{name}}>();
-    {{/model}}
-    {{/models}}
-}
+class Order : public RefCounted {
+    GDCLASS(Order, RefCounted);
 
-void uninitialize_{{app_name}}_module(ModuleInitializationLevel p_level) {
-	if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
-			return;
-	}
-}
+    Long id;
+    Long petId;
+    Integer quantity;
+    Date shipDate;
+    String status;
+    Boolean complete;
+
+protected:
+    static void _bind_methods() {}
+
+public:
+    Long get_id() const { return id; }
+    void set_id(Long value) { id = value; }
+    Long get_petId() const { return petId; }
+    void set_petId(Long value) { petId = value; }
+    Integer get_quantity() const { return quantity; }
+    void set_quantity(Integer value) { quantity = value; }
+    Date get_shipDate() const { return shipDate; }
+    void set_shipDate(Date value) { shipDate = value; }
+    String get_status() const { return status; }
+    void set_status(String value) { status = value; }
+    Boolean get_complete() const { return complete; }
+    void set_complete(Boolean value) { complete = value; }
+
+    Order();
+};
+
+#endif // ORDER_H

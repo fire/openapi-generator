@@ -5,10 +5,16 @@ apis/StoreApi.cpp
 apis/UserApi.cpp
 config.py
 models/ApiResponse.cpp
+models/ApiResponse.h
 models/Category.cpp
+models/Category.h
 models/Order.cpp
+models/Order.h
 models/Pet.cpp
+models/Pet.h
 models/Tag.cpp
+models/Tag.h
 models/User.cpp
+models/User.h
 register_types.cpp
 register_types.h

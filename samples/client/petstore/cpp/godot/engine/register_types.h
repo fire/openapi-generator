@@ -28,12 +28,12 @@
 /* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                 */
 /**************************************************************************/
 
-#ifndef OPENAPI SAMPLE_REGISTER_TYPES_H
-#define OPENAPI SAMPLE_REGISTER_TYPES_H
+#ifndef OPENAPI_CLIENT_REGISTER_TYPES_H
+#define OPENAPI_CLIENT_REGISTER_TYPES_H
 
 #include "modules/register_module_types.h"
 
-void initialize_OpenAPI Sample_module(ModuleInitializationLevel p_level);
-void uninitialize_OpenAPI Sample_module(ModuleInitializationLevel p_level);
+void initialize_openapi_client_module(ModuleInitializationLevel p_level);
+void uninitialize_openapi_client_module(ModuleInitializationLevel p_level);
 
-#endif // OPENAPI SAMPLE_REGISTER_TYPES_H
+#endif // OPENAPI_CLIENT_REGISTER_TYPES_H

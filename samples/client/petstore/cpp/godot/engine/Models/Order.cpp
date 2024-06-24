@@ -1,14 +1,77 @@
-# .models.Order
-## Properties
+/**************************************************************************/
+/*  register_types.h                                                      */
+/**************************************************************************/
+/*                         This file is part of:                          */
+/*                             GODOT ENGINE                               */
+/*                        https://godotengine.org                         */
+/**************************************************************************/
+/* Copyright (c) 2014-present Godot Engine contributors (see AUTHORS.md). */
+/* Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.                  */
+/*                                                                        */
+/* Permission is hereby granted, free of charge, to any person obtaining  */
+/* a copy of this software and associated documentation files (the        */
+/* "Software"), to deal in the Software without restriction, including    */
+/* without limitation the rights to use, copy, modify, merge, publish,    */
+/* distribute, sublicense, and/or sell copies of the Software, and to     */
+/* permit persons to whom the Software is furnished to do so, subject to  */
+/* the following conditions:                                              */
+/*                                                                        */
+/* The above copyright notice and this permission notice shall be         */
+/* included in all copies or substantial portions of the Software.        */
+/*                                                                        */
+/* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,        */
+/* EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF     */
+/* MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. */
+/* IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY   */
+/* CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,   */
+/* TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE      */
+/* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                 */
+/**************************************************************************/
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**id** | [**Long**](long.md) |  | [optional] [default to null]
-**petId** | [**Long**](long.md) |  | [optional] [default to null]
-**quantity** | [**Integer**](integer.md) |  | [optional] [default to null]
-**shipDate** | [**Date**](DateTime.md) |  | [optional] [default to null]
-**status** | [**String**](string.md) | Order Status | [optional] [default to null]
-**complete** | [**Boolean**](boolean.md) |  | [optional] [default to false]
+#include "Order.h"
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+Long Order::get_id() const {
+    return id;
+}
 
+void Order::set_id(Long value) {
+    id = value;
+}
+Long Order::get_petId() const {
+    return petId;
+}
+
+void Order::set_petId(Long value) {
+    petId = value;
+}
+Integer Order::get_quantity() const {
+    return quantity;
+}
+
+void Order::set_quantity(Integer value) {
+    quantity = value;
+}
+Date Order::get_shipDate() const {
+    return shipDate;
+}
+
+void Order::set_shipDate(Date value) {
+    shipDate = value;
+}
+String Order::get_status() const {
+    return status;
+}
+
+void Order::set_status(String value) {
+    status = value;
+}
+Boolean Order::get_complete() const {
+    return complete;
+}
+
+void Order::set_complete(Boolean value) {
+    complete = value;
+}
+
+Order::Order() {
+}

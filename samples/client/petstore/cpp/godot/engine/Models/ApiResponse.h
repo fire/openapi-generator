@@ -1,5 +1,5 @@
 /**************************************************************************/
-/*  register_types.cpp                                                    */
+/*  register_types.h                                                      */
 /**************************************************************************/
 /*                         This file is part of:                          */
 /*                             GODOT ENGINE                               */
@@ -28,24 +28,30 @@
 /* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                 */
 /**************************************************************************/
 
-#include "register_types.h"
+#ifndef APIRESPONSE_H
+#define APIRESPONSE_H
 
-#include "core/object/class_db.h"
-#include "{{app_name}}.h"
+#include "core/object/ref_counted.h"
 
-void initialize_{{app_name}}_module(ModuleInitializationLevel p_level) {
-	if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
-			return;
-	}
-    {{#models}}
-    {{#model}}
-    ClassDB::register_class<{{name}}>();
-    {{/model}}
-    {{/models}}
-}
+class ApiResponse : public RefCounted {
+    GDCLASS(ApiResponse, RefCounted);
 
-void uninitialize_{{app_name}}_module(ModuleInitializationLevel p_level) {
-	if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
-			return;
-	}
-}
+    Integer code;
+    String type;
+    String message;
+
+protected:
+    static void _bind_methods() {}
+
+public:
+    Integer get_code() const { return code; }
+    void set_code(Integer value) { code = value; }
+    String get_type() const { return type; }
+    void set_type(String value) { type = value; }
+    String get_message() const { return message; }
+    void set_message(String value) { message = value; }
+
+    ApiResponse();
+};
+
+#endif // APIRESPONSE_H

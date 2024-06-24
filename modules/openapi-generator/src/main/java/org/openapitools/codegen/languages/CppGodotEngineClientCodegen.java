@@ -37,8 +37,10 @@ public class CppGodotEngineClientCodegen extends DefaultCodegen implements Codeg
         super();
 
         outputFolder = "generated-code" + File.separator + "cpp-godot-engine";
-        modelTemplateFiles.put("model.mustache", ".cpp");
-        apiTemplateFiles.put("api.mustache", ".cpp");
+        modelTemplateFiles.put("model_cpp.mustache", ".cpp"); // TODO: snake_case
+        modelTemplateFiles.put("model_h.mustache", ".h"); // TODO: snake_case
+        apiTemplateFiles.put("api.mustache", ".cpp"); // TODO: snake_case
+        apiTemplateFiles.put("api.mustache", ".cpp"); // TODO: snake_case
         embeddedTemplateDir = templateDir = "cpp-godot-engine";
         apiPackage = "apis";
         modelPackage = "models";
@@ -48,6 +50,6 @@ public class CppGodotEngineClientCodegen extends DefaultCodegen implements Codeg
         supportingFiles.add(new SupportingFile("register_types_cpp.mustache", "", "register_types.cpp"));
         supportingFiles.add(new SupportingFile("register_types_h.mustache", "", "register_types.h"));
         cliOptions.add(new CliOption("app_name", "short name of the application"));
-        additionalProperties.put("app_name", "OpenAPI Sample");
+        additionalProperties.put("app_name", "openapi_client"); // TODO force snake case.
     }
 }

@@ -1,5 +1,5 @@
 /**************************************************************************/
-/*  register_types.cpp                                                    */
+/*  register_types.h                                                      */
 /**************************************************************************/
 /*                         This file is part of:                          */
 /*                             GODOT ENGINE                               */
@@ -28,24 +28,27 @@
 /* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                 */
 /**************************************************************************/
 
-#include "register_types.h"
+#ifndef CATEGORY_H
+#define CATEGORY_H
 
-#include "core/object/class_db.h"
-#include "{{app_name}}.h"
+#include "core/object/ref_counted.h"
 
-void initialize_{{app_name}}_module(ModuleInitializationLevel p_level) {
-	if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
-			return;
-	}
-    {{#models}}
-    {{#model}}
-    ClassDB::register_class<{{name}}>();
-    {{/model}}
-    {{/models}}
-}
+class Category : public RefCounted {
+    GDCLASS(Category, RefCounted);
 
-void uninitialize_{{app_name}}_module(ModuleInitializationLevel p_level) {
-	if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
-			return;
-	}
-}
+    Long id;
+    String name;
+
+protected:
+    static void _bind_methods() {}
+
+public:
+    Long get_id() const { return id; }
+    void set_id(Long value) { id = value; }
+    String get_name() const { return name; }
+    void set_name(String value) { name = value; }
+
+    Category();
+};
+
+#endif // CATEGORY_H

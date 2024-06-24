@@ -1,5 +1,5 @@
 /**************************************************************************/
-/*  register_types.cpp                                                    */
+/*  register_types.h                                                      */
 /**************************************************************************/
 /*                         This file is part of:                          */
 /*                             GODOT ENGINE                               */
@@ -28,24 +28,45 @@
 /* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                 */
 /**************************************************************************/
 
-#include "register_types.h"
+#ifndef USER_H
+#define USER_H
 
-#include "core/object/class_db.h"
-#include "{{app_name}}.h"
+#include "core/object/ref_counted.h"
 
-void initialize_{{app_name}}_module(ModuleInitializationLevel p_level) {
-	if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
-			return;
-	}
-    {{#models}}
-    {{#model}}
-    ClassDB::register_class<{{name}}>();
-    {{/model}}
-    {{/models}}
-}
+class User : public RefCounted {
+    GDCLASS(User, RefCounted);
 
-void uninitialize_{{app_name}}_module(ModuleInitializationLevel p_level) {
-	if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
-			return;
-	}
-}
+    Long id;
+    String username;
+    String firstName;
+    String lastName;
+    String email;
+    String password;
+    String phone;
+    Integer userStatus;
+
+protected:
+    static void _bind_methods() {}
+
+public:
+    Long get_id() const { return id; }
+    void set_id(Long value) { id = value; }
+    String get_username() const { return username; }
+    void set_username(String value) { username = value; }
+    String get_firstName() const { return firstName; }
+    void set_firstName(String value) { firstName = value; }
+    String get_lastName() const { return lastName; }
+    void set_lastName(String value) { lastName = value; }
+    String get_email() const { return email; }
+    void set_email(String value) { email = value; }
+    String get_password() const { return password; }
+    void set_password(String value) { password = value; }
+    String get_phone() const { return phone; }
+    void set_phone(String value) { phone = value; }
+    Integer get_userStatus() const { return userStatus; }
+    void set_userStatus(Integer value) { userStatus = value; }
+
+    User();
+};
+
+#endif // USER_H

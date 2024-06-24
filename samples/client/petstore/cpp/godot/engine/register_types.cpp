@@ -31,23 +31,21 @@
 #include "register_types.h"
 
 #include "core/object/class_db.h"
-#include "OpenAPI Sample.h"
+#include "openapi_client.h"
 
-void initialize_OpenAPI Sample_module(ModuleInitializationLevel p_level) {
+void initialize_openapi_client_module(ModuleInitializationLevel p_level) {
 	if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
 			return;
 	}
-/*
     ClassDB::register_class<ApiResponse>();
     ClassDB::register_class<Category>();
     ClassDB::register_class<Order>();
     ClassDB::register_class<Pet>();
     ClassDB::register_class<Tag>();
     ClassDB::register_class<User>();
-*/
 }
 
-void uninitialize_OpenAPI Sample_module(ModuleInitializationLevel p_level) {
+void uninitialize_openapi_client_module(ModuleInitializationLevel p_level) {
 	if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
 			return;
 	}
