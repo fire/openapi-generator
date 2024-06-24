@@ -32,12 +32,12 @@ Class | Method | HTTP request | Description
 <a id="documentation-for-models"></a>
 ## Documentation for Models
 
- - [Models.ApiResponse](Models/ApiResponse.md)
- - [Models.Category](Models/Category.md)
- - [Models.Order](Models/Order.md)
- - [Models.Pet](Models/Pet.md)
- - [Models.Tag](Models/Tag.md)
- - [Models.User](Models/User.md)
+ - [models.ApiResponse](Models/ApiResponse.md)
+ - [models.Category](Models/Category.md)
+ - [models.Order](Models/Order.md)
+ - [models.Pet](Models/Pet.md)
+ - [models.Tag](Models/Tag.md)
+ - [models.User](Models/User.md)
 
 
 <a id="documentation-for-authorization"></a>

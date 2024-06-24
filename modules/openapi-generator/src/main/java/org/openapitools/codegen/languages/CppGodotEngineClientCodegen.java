@@ -11,11 +11,13 @@ import java.util.*;
 
 import org.apache.commons.lang3.StringUtils;
 
+import static org.openapitools.codegen.utils.StringUtils.underscore;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class CppGodotEngineClientCodegen extends DefaultCodegen implements CodegenConfig {
-    public static final String PROJECT_NAME = "projectName";
+    public static final String PROJECT_NAME = "godot_engine_client";
 
     private final Logger LOGGER = LoggerFactory.getLogger(CppGodotEngineClientCodegen.class);
 
@@ -35,12 +37,15 @@ public class CppGodotEngineClientCodegen extends DefaultCodegen implements Codeg
         super();
 
         outputFolder = "generated-code" + File.separator + "cpp-godot-engine";
-        modelTemplateFiles.put("model.mustache", ".zz");
-        apiTemplateFiles.put("api.mustache", ".zz");
+        modelTemplateFiles.put("model.mustache", ".cpp");
+        apiTemplateFiles.put("api.mustache", ".cpp");
         embeddedTemplateDir = templateDir = "cpp-godot-engine";
-        apiPackage = "Apis";
-        modelPackage = "Models";
+        apiPackage = "apis";
+        modelPackage = "models";
         supportingFiles.add(new SupportingFile("README.mustache", "", "README.md"));
-        // TODO: Fill this out.
+        supportingFiles.add(new SupportingFile("register_types_cpp.mustache", "", "register_types.cpp"));
+        supportingFiles.add(new SupportingFile("register_types_h.mustache", "", "register_types.h"));
+        cliOptions.add(new CliOption("app_name", "short name of the application"));
+        additionalProperties.put("app_name", "OpenAPI Sample");
     }
 }
