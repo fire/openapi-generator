@@ -47,6 +47,7 @@ public:
 
     void createUser(User user);
 };
+
 class UserApi : public RefCounted {
     GDCLASS(UserApi, RefCounted);
 
@@ -61,6 +62,7 @@ public:
 
     void createUsersWithArrayInput(List user);
 };
+
 class UserApi : public RefCounted {
     GDCLASS(UserApi, RefCounted);
 
@@ -75,6 +77,7 @@ public:
 
     void createUsersWithListInput(List user);
 };
+
 class UserApi : public RefCounted {
     GDCLASS(UserApi, RefCounted);
 
@@ -89,6 +92,7 @@ public:
 
     void deleteUser(String username);
 };
+
 class UserApi : public RefCounted {
     GDCLASS(UserApi, RefCounted);
 
@@ -103,6 +107,7 @@ public:
 
     User getUserByName(String username);
 };
+
 class UserApi : public RefCounted {
     GDCLASS(UserApi, RefCounted);
 
@@ -118,6 +123,7 @@ public:
 
     String loginUser(String username, String password);
 };
+
 class UserApi : public RefCounted {
     GDCLASS(UserApi, RefCounted);
 
@@ -131,6 +137,7 @@ public:
 
     void logoutUser();
 };
+
 class UserApi : public RefCounted {
     GDCLASS(UserApi, RefCounted);
 

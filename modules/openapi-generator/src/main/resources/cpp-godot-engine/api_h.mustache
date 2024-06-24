@@ -51,7 +51,7 @@ public:
 
     {{#returnType}}{{returnType}}{{/returnType}}{{^returnType}}void{{/returnType}} {{operationId}}({{#allParams}}{{dataType}} {{paramName}}{{^-last}}, {{/-last}}{{/allParams}});
 };
+
 {{/operation}}
 {{/operations}}
-
 #endif // {{#lambda.uppercase}}{{classname}}{{/lambda.uppercase}}_H

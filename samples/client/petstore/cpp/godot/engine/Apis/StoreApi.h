@@ -47,6 +47,7 @@ public:
 
     void deleteOrder(String orderId);
 };
+
 class StoreApi : public RefCounted {
     GDCLASS(StoreApi, RefCounted);
 
@@ -60,6 +61,7 @@ public:
 
     Map getInventory();
 };
+
 class StoreApi : public RefCounted {
     GDCLASS(StoreApi, RefCounted);
 
@@ -74,6 +76,7 @@ public:
 
     Order getOrderById(Long orderId);
 };
+
 class StoreApi : public RefCounted {
     GDCLASS(StoreApi, RefCounted);
 

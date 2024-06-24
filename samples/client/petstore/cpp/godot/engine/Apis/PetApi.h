@@ -47,6 +47,7 @@ public:
 
     Pet addPet(Pet pet);
 };
+
 class PetApi : public RefCounted {
     GDCLASS(PetApi, RefCounted);
 
@@ -62,6 +63,7 @@ public:
 
     void deletePet(Long petId, String apiKey);
 };
+
 class PetApi : public RefCounted {
     GDCLASS(PetApi, RefCounted);
 
@@ -76,6 +78,7 @@ public:
 
     List findPetsByStatus(List status);
 };
+
 class PetApi : public RefCounted {
     GDCLASS(PetApi, RefCounted);
 
@@ -90,6 +93,7 @@ public:
 
     List findPetsByTags(List tags);
 };
+
 class PetApi : public RefCounted {
     GDCLASS(PetApi, RefCounted);
 
@@ -104,6 +108,7 @@ public:
 
     Pet getPetById(Long petId);
 };
+
 class PetApi : public RefCounted {
     GDCLASS(PetApi, RefCounted);
 
@@ -118,6 +123,7 @@ public:
 
     Pet updatePet(Pet pet);
 };
+
 class PetApi : public RefCounted {
     GDCLASS(PetApi, RefCounted);
 
@@ -134,6 +140,7 @@ public:
 
     void updatePetWithForm(Long petId, String name, String status);
 };
+
 class PetApi : public RefCounted {
     GDCLASS(PetApi, RefCounted);
 
