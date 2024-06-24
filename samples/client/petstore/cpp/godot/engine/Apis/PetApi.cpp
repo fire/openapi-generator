@@ -55,39 +55,47 @@ Pet PetApi::addPet(Pet pet) {
     // TODO: compute result
     return result;
 }
+
 void PetApi::deletePet(Long petId, String apiKey) {
     // method implementation for void return
 }
+
 List PetApi::findPetsByStatus(List status) {
     // method implementation with return
     List result;
     // TODO: compute result
     return result;
 }
+
 List PetApi::findPetsByTags(List tags) {
     // method implementation with return
     List result;
     // TODO: compute result
     return result;
 }
+
 Pet PetApi::getPetById(Long petId) {
     // method implementation with return
     Pet result;
     // TODO: compute result
     return result;
 }
+
 Pet PetApi::updatePet(Pet pet) {
     // method implementation with return
     Pet result;
     // TODO: compute result
     return result;
 }
+
 void PetApi::updatePetWithForm(Long petId, String name, String status) {
     // method implementation for void return
 }
+
 ApiResponse PetApi::uploadFile(Long petId, String additionalMetadata, File file) {
     // method implementation with return
     ApiResponse result;
     // TODO: compute result
     return result;
 }
+
