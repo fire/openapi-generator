@@ -37,6 +37,7 @@ Long Pet::get_id() const {
 void Pet::set_id(Long value) {
     id = value;
 }
+
 Category Pet::get_category() const {
     return category;
 }
@@ -44,6 +45,7 @@ Category Pet::get_category() const {
 void Pet::set_category(Category value) {
     category = value;
 }
+
 String Pet::get_name() const {
     return name;
 }
@@ -51,6 +53,7 @@ String Pet::get_name() const {
 void Pet::set_name(String value) {
     name = value;
 }
+
 List Pet::get_photoUrls() const {
     return photoUrls;
 }
@@ -58,6 +61,7 @@ List Pet::get_photoUrls() const {
 void Pet::set_photoUrls(List value) {
     photoUrls = value;
 }
+
 List Pet::get_tags() const {
     return tags;
 }
@@ -65,6 +69,7 @@ List Pet::get_tags() const {
 void Pet::set_tags(List value) {
     tags = value;
 }
+
 String Pet::get_status() const {
     return status;
 }

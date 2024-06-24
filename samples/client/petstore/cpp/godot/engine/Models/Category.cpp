@@ -37,6 +37,7 @@ Long Category::get_id() const {
 void Category::set_id(Long value) {
     id = value;
 }
+
 String Category::get_name() const {
     return name;
 }

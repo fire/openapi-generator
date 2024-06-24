@@ -37,6 +37,7 @@ Long Tag::get_id() const {
 void Tag::set_id(Long value) {
     id = value;
 }
+
 String Tag::get_name() const {
     return name;
 }

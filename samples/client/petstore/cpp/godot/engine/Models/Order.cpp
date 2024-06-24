@@ -37,6 +37,7 @@ Long Order::get_id() const {
 void Order::set_id(Long value) {
     id = value;
 }
+
 Long Order::get_petId() const {
     return petId;
 }
@@ -44,6 +45,7 @@ Long Order::get_petId() const {
 void Order::set_petId(Long value) {
     petId = value;
 }
+
 Integer Order::get_quantity() const {
     return quantity;
 }
@@ -51,6 +53,7 @@ Integer Order::get_quantity() const {
 void Order::set_quantity(Integer value) {
     quantity = value;
 }
+
 Date Order::get_shipDate() const {
     return shipDate;
 }
@@ -58,6 +61,7 @@ Date Order::get_shipDate() const {
 void Order::set_shipDate(Date value) {
     shipDate = value;
 }
+
 String Order::get_status() const {
     return status;
 }
@@ -65,6 +69,7 @@ String Order::get_status() const {
 void Order::set_status(String value) {
     status = value;
 }
+
 Boolean Order::get_complete() const {
     return complete;
 }

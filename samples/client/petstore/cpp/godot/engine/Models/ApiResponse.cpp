@@ -37,6 +37,7 @@ Integer ApiResponse::get_code() const {
 void ApiResponse::set_code(Integer value) {
     code = value;
 }
+
 String ApiResponse::get_type() const {
     return type;
 }
@@ -44,6 +45,7 @@ String ApiResponse::get_type() const {
 void ApiResponse::set_type(String value) {
     type = value;
 }
+
 String ApiResponse::get_message() const {
     return message;
 }

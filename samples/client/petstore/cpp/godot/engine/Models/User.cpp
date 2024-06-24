@@ -37,6 +37,7 @@ Long User::get_id() const {
 void User::set_id(Long value) {
     id = value;
 }
+
 String User::get_username() const {
     return username;
 }
@@ -44,6 +45,7 @@ String User::get_username() const {
 void User::set_username(String value) {
     username = value;
 }
+
 String User::get_firstName() const {
     return firstName;
 }
@@ -51,6 +53,7 @@ String User::get_firstName() const {
 void User::set_firstName(String value) {
     firstName = value;
 }
+
 String User::get_lastName() const {
     return lastName;
 }
@@ -58,6 +61,7 @@ String User::get_lastName() const {
 void User::set_lastName(String value) {
     lastName = value;
 }
+
 String User::get_email() const {
     return email;
 }
@@ -65,6 +69,7 @@ String User::get_email() const {
 void User::set_email(String value) {
     email = value;
 }
+
 String User::get_password() const {
     return password;
 }
@@ -72,6 +77,7 @@ String User::get_password() const {
 void User::set_password(String value) {
     password = value;
 }
+
 String User::get_phone() const {
     return phone;
 }
@@ -79,6 +85,7 @@ String User::get_phone() const {
 void User::set_phone(String value) {
     phone = value;
 }
+
 Integer User::get_userStatus() const {
     return userStatus;
 }
