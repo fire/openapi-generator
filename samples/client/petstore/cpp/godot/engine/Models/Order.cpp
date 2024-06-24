@@ -30,6 +30,33 @@
 
 #include "Order.h"
 
+void Order::_bind_methods() {
+    ClassDB::bind_method(D_METHOD("get_id"), &Order::get_id);
+    ClassDB::bind_method(D_METHOD("set_id", "p_value"), &Order::set_id);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(Long, "id"), "set_id", "get_id");
+    ClassDB::bind_method(D_METHOD("get_petId"), &Order::get_petId);
+    ClassDB::bind_method(D_METHOD("set_petId", "p_value"), &Order::set_petId);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(Long, "petId"), "set_petId", "get_petId");
+    ClassDB::bind_method(D_METHOD("get_quantity"), &Order::get_quantity);
+    ClassDB::bind_method(D_METHOD("set_quantity", "p_value"), &Order::set_quantity);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(Integer, "quantity"), "set_quantity", "get_quantity");
+    ClassDB::bind_method(D_METHOD("get_shipDate"), &Order::get_shipDate);
+    ClassDB::bind_method(D_METHOD("set_shipDate", "p_value"), &Order::set_shipDate);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(Date, "shipDate"), "set_shipDate", "get_shipDate");
+    ClassDB::bind_method(D_METHOD("get_status"), &Order::get_status);
+    ClassDB::bind_method(D_METHOD("set_status", "p_value"), &Order::set_status);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(String, "status"), "set_status", "get_status");
+    ClassDB::bind_method(D_METHOD("get_complete"), &Order::get_complete);
+    ClassDB::bind_method(D_METHOD("set_complete", "p_value"), &Order::set_complete);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(Boolean, "complete"), "set_complete", "get_complete");
+}
+
 Long Order::get_id() const {
     return id;
 }

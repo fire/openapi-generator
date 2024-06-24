@@ -30,6 +30,21 @@
 
 #include "ApiResponse.h"
 
+void ApiResponse::_bind_methods() {
+    ClassDB::bind_method(D_METHOD("get_code"), &ApiResponse::get_code);
+    ClassDB::bind_method(D_METHOD("set_code", "p_value"), &ApiResponse::set_code);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(Integer, "code"), "set_code", "get_code");
+    ClassDB::bind_method(D_METHOD("get_type"), &ApiResponse::get_type);
+    ClassDB::bind_method(D_METHOD("set_type", "p_value"), &ApiResponse::set_type);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(String, "type"), "set_type", "get_type");
+    ClassDB::bind_method(D_METHOD("get_message"), &ApiResponse::get_message);
+    ClassDB::bind_method(D_METHOD("set_message", "p_value"), &ApiResponse::set_message);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(String, "message"), "set_message", "get_message");
+}
+
 Integer ApiResponse::get_code() const {
     return code;
 }

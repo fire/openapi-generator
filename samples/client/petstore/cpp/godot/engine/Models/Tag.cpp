@@ -30,6 +30,17 @@
 
 #include "Tag.h"
 
+void Tag::_bind_methods() {
+    ClassDB::bind_method(D_METHOD("get_id"), &Tag::get_id);
+    ClassDB::bind_method(D_METHOD("set_id", "p_value"), &Tag::set_id);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(Long, "id"), "set_id", "get_id");
+    ClassDB::bind_method(D_METHOD("get_name"), &Tag::get_name);
+    ClassDB::bind_method(D_METHOD("set_name", "p_value"), &Tag::set_name);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(String, "name"), "set_name", "get_name");
+}
+
 Long Tag::get_id() const {
     return id;
 }

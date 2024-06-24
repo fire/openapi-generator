@@ -51,7 +51,7 @@ class Order : public RefCounted {
     Boolean complete;
 
 protected:
-    static void _bind_methods() {}
+    static void _bind_methods();
 
 public:
     Long get_id() const { return id; }

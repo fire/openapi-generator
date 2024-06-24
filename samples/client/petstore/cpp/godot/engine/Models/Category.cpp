@@ -30,6 +30,17 @@
 
 #include "Category.h"
 
+void Category::_bind_methods() {
+    ClassDB::bind_method(D_METHOD("get_id"), &Category::get_id);
+    ClassDB::bind_method(D_METHOD("set_id", "p_value"), &Category::set_id);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(Long, "id"), "set_id", "get_id");
+    ClassDB::bind_method(D_METHOD("get_name"), &Category::get_name);
+    ClassDB::bind_method(D_METHOD("set_name", "p_value"), &Category::set_name);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(String, "name"), "set_name", "get_name");
+}
+
 Long Category::get_id() const {
     return id;
 }

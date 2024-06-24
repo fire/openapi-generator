@@ -30,6 +30,19 @@
 
 #include "{{classname}}.h"
 
+void {{classname}}::_bind_methods() {
+    {{#models}}
+        {{#model}}
+            {{#vars}}
+    ClassDB::bind_method(D_METHOD("get_{{name}}"), &{{classname}}::get_{{name}});
+    ClassDB::bind_method(D_METHOD("set_{{name}}", "p_value"), &{{classname}}::set_{{name}});
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo({{dataType}}, "{{name}}"), "set_{{name}}", "get_{{name}}");
+            {{/vars}}
+        {{/model}}
+    {{/models}}
+}
+
 {{#models}}
 {{#model}}
 {{#vars}}

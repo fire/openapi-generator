@@ -30,6 +30,41 @@
 
 #include "User.h"
 
+void User::_bind_methods() {
+    ClassDB::bind_method(D_METHOD("get_id"), &User::get_id);
+    ClassDB::bind_method(D_METHOD("set_id", "p_value"), &User::set_id);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(Long, "id"), "set_id", "get_id");
+    ClassDB::bind_method(D_METHOD("get_username"), &User::get_username);
+    ClassDB::bind_method(D_METHOD("set_username", "p_value"), &User::set_username);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(String, "username"), "set_username", "get_username");
+    ClassDB::bind_method(D_METHOD("get_firstName"), &User::get_firstName);
+    ClassDB::bind_method(D_METHOD("set_firstName", "p_value"), &User::set_firstName);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(String, "firstName"), "set_firstName", "get_firstName");
+    ClassDB::bind_method(D_METHOD("get_lastName"), &User::get_lastName);
+    ClassDB::bind_method(D_METHOD("set_lastName", "p_value"), &User::set_lastName);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(String, "lastName"), "set_lastName", "get_lastName");
+    ClassDB::bind_method(D_METHOD("get_email"), &User::get_email);
+    ClassDB::bind_method(D_METHOD("set_email", "p_value"), &User::set_email);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(String, "email"), "set_email", "get_email");
+    ClassDB::bind_method(D_METHOD("get_password"), &User::get_password);
+    ClassDB::bind_method(D_METHOD("set_password", "p_value"), &User::set_password);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(String, "password"), "set_password", "get_password");
+    ClassDB::bind_method(D_METHOD("get_phone"), &User::get_phone);
+    ClassDB::bind_method(D_METHOD("set_phone", "p_value"), &User::set_phone);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(String, "phone"), "set_phone", "get_phone");
+    ClassDB::bind_method(D_METHOD("get_userStatus"), &User::get_userStatus);
+    ClassDB::bind_method(D_METHOD("set_userStatus", "p_value"), &User::set_userStatus);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(Integer, "userStatus"), "set_userStatus", "get_userStatus");
+}
+
 Long User::get_id() const {
     return id;
 }

@@ -30,6 +30,33 @@
 
 #include "Pet.h"
 
+void Pet::_bind_methods() {
+    ClassDB::bind_method(D_METHOD("get_id"), &Pet::get_id);
+    ClassDB::bind_method(D_METHOD("set_id", "p_value"), &Pet::set_id);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(Long, "id"), "set_id", "get_id");
+    ClassDB::bind_method(D_METHOD("get_category"), &Pet::get_category);
+    ClassDB::bind_method(D_METHOD("set_category", "p_value"), &Pet::set_category);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(Category, "category"), "set_category", "get_category");
+    ClassDB::bind_method(D_METHOD("get_name"), &Pet::get_name);
+    ClassDB::bind_method(D_METHOD("set_name", "p_value"), &Pet::set_name);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(String, "name"), "set_name", "get_name");
+    ClassDB::bind_method(D_METHOD("get_photoUrls"), &Pet::get_photoUrls);
+    ClassDB::bind_method(D_METHOD("set_photoUrls", "p_value"), &Pet::set_photoUrls);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(List, "photoUrls"), "set_photoUrls", "get_photoUrls");
+    ClassDB::bind_method(D_METHOD("get_tags"), &Pet::get_tags);
+    ClassDB::bind_method(D_METHOD("set_tags", "p_value"), &Pet::set_tags);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(List, "tags"), "set_tags", "get_tags");
+    ClassDB::bind_method(D_METHOD("get_status"), &Pet::get_status);
+    ClassDB::bind_method(D_METHOD("set_status", "p_value"), &Pet::set_status);
+    // TODO: fire 20240624 Fix type of the property.
+    ADD_PROPERTY(PropertyInfo(String, "status"), "set_status", "get_status");
+}
+
 Long Pet::get_id() const {
     return id;
 }
