@@ -51,7 +51,8 @@ public:
     String get_message() const { return message; }
     void set_message(String value) { message = value; }
 
-    ApiResponse();
+    ApiResponse() {}
+    ~ApiResponse() {}
 };
 
 #endif // APIRESPONSE_H

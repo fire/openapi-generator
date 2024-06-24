@@ -60,7 +60,8 @@ public:
     Boolean get_complete() const { return complete; }
     void set_complete(Boolean value) { complete = value; }
 
-    Order();
+    Order() {}
+    ~Order() {}
 };
 
 #endif // ORDER_H

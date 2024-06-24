@@ -48,7 +48,8 @@ public:
     String get_name() const { return name; }
     void set_name(String value) { name = value; }
 
-    Tag();
+    Tag() {}
+    ~Tag() {}
 };
 
 #endif // TAG_H

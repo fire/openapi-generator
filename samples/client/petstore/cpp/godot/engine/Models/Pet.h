@@ -60,7 +60,8 @@ public:
     String get_status() const { return status; }
     void set_status(String value) { status = value; }
 
-    Pet();
+    Pet() {}
+    ~Pet() {}
 };
 
 #endif // PET_H

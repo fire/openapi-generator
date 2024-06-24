@@ -51,7 +51,8 @@ public:
     void set_{{name}}({{dataType}} value) { {{name}} = value; }
     {{/vars}}
 
-    {{classname}}();
+    {{classname}}() {}
+    ~{{classname}}() {}
 };
 {{/model}}
 {{/models}}

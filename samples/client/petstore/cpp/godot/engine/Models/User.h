@@ -66,7 +66,8 @@ public:
     Integer get_userStatus() const { return userStatus; }
     void set_userStatus(Integer value) { userStatus = value; }
 
-    User();
+    User() {}
+    ~User() {}
 };
 
 #endif // USER_H
