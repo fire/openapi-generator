@@ -49,6 +49,7 @@ public class CppGodotEngineClientCodegen extends DefaultCodegen implements Codeg
         supportingFiles.add(new SupportingFile("config_py.mustache", "", "config.py"));
         supportingFiles.add(new SupportingFile("register_types_cpp.mustache", "", "register_types.cpp"));
         supportingFiles.add(new SupportingFile("register_types_h.mustache", "", "register_types.h"));
+        supportingFiles.add(new SupportingFile("api_client_cpp.mustache", "", "api_client.cpp"));
         cliOptions.add(new CliOption("app_name", "short name of the application"));
         additionalProperties.put("app_name", "openapi_client"); // TODO force snake case.
     }

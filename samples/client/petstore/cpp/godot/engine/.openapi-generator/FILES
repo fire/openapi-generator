@@ -1,5 +1,6 @@
 README.md
 SCsub
+api_client.cpp
 apis/PetApi.cpp
 apis/PetApi.h
 apis/StoreApi.cpp
