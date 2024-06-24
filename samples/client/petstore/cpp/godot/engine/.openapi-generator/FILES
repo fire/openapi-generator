@@ -1,8 +1,11 @@
 README.md
 SCsub
 apis/PetApi.cpp
+apis/PetApi.h
 apis/StoreApi.cpp
+apis/StoreApi.h
 apis/UserApi.cpp
+apis/UserApi.h
 config.py
 models/ApiResponse.cpp
 models/ApiResponse.h

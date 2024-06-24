@@ -39,8 +39,8 @@ public class CppGodotEngineClientCodegen extends DefaultCodegen implements Codeg
         outputFolder = "generated-code" + File.separator + "cpp-godot-engine";
         modelTemplateFiles.put("model_cpp.mustache", ".cpp"); // TODO: snake_case
         modelTemplateFiles.put("model_h.mustache", ".h"); // TODO: snake_case
-        apiTemplateFiles.put("api.mustache", ".cpp"); // TODO: snake_case
-        apiTemplateFiles.put("api.mustache", ".cpp"); // TODO: snake_case
+        apiTemplateFiles.put("api_h.mustache", ".h"); // TODO: snake_case
+        apiTemplateFiles.put("api_cpp.mustache", ".cpp"); // TODO: snake_case
         embeddedTemplateDir = templateDir = "cpp-godot-engine";
         apiPackage = "apis";
         modelPackage = "models";
