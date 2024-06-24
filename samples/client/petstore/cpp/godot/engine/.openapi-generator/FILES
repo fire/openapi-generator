@@ -3,6 +3,7 @@ SCsub
 apis/PetApi.cpp
 apis/StoreApi.cpp
 apis/UserApi.cpp
+config.py
 models/ApiResponse.cpp
 models/Category.cpp
 models/Order.cpp
