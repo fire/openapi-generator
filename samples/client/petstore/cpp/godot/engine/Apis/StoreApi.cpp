@@ -1,117 +1,61 @@
-# StoreApi
+/**************************************************************************/
+/*  api.cpp                                                               */
+/**************************************************************************/
+/*                         This file is part of:                          */
+/*                             GODOT ENGINE                               */
+/*                        https://godotengine.org                         */
+/**************************************************************************/
+/* Copyright (c) 2014-present Godot Engine contributors (see AUTHORS.md). */
+/* Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.                  */
+/*                                                                        */
+/* Permission is hereby granted, free of charge, to any person obtaining  */
+/* a copy of this software and associated documentation files (the        */
+/* "Software"), to deal in the Software without restriction, including    */
+/* without limitation the rights to use, copy, modify, merge, publish,    */
+/* distribute, sublicense, and/or sell copies of the Software, and to     */
+/* permit persons to whom the Software is furnished to do so, subject to  */
+/* the following conditions:                                              */
+/*                                                                        */
+/* The above copyright notice and this permission notice shall be         */
+/* included in all copies or substantial portions of the Software.        */
+/*                                                                        */
+/* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,        */
+/* EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF     */
+/* MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. */
+/* IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY   */
+/* CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,   */
+/* TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE      */
+/* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                 */
+/**************************************************************************/
 
-All URIs are relative to *http://petstore.swagger.io/v2*
+void StoreApi::_bind_methods() {
+    ClassDB::bind_method(D_METHOD("deleteOrder", "orderId"), &StoreApi::deleteOrder);
+    ClassDB::bind_method(D_METHOD("getInventory", ""), &StoreApi::getInventory);
+    ClassDB::bind_method(D_METHOD("getOrderById", "orderId"), &StoreApi::getOrderById);
+    ClassDB::bind_method(D_METHOD("placeOrder", "order"), &StoreApi::placeOrder);
+}
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**deleteOrder**](StoreApi.md#deleteOrder) | **DELETE** /store/order/{orderId} | Delete purchase order by ID
-[**getInventory**](StoreApi.md#getInventory) | **GET** /store/inventory | Returns pet inventories by status
-[**getOrderById**](StoreApi.md#getOrderById) | **GET** /store/order/{orderId} | Find purchase order by ID
-[**placeOrder**](StoreApi.md#placeOrder) | **POST** /store/order | Place an order for a pet
+StoreApi::StoreApi() {
+    // constructor implementation
+}
 
+StoreApi::~StoreApi() {
+    // destructor implementation
+}
 
-<a id="deleteOrder"></a>
-# **deleteOrder**
-> deleteOrder(orderId)
+void StoreApi::deleteOrder(String orderId) {
+    // method implementation
+}
 
-Delete purchase order by ID
+void StoreApi::getInventory() {
+    // method implementation
+}
 
-For valid response try integer IDs with value &lt; 1000. Anything above 1000 or nonintegers will generate API errors
+void StoreApi::getOrderById(Long orderId) {
+    // method implementation
+}
 
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **orderId** | **String**| ID of the order that needs to be deleted | [default to null]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-<a id="getInventory"></a>
-# **getInventory**
-> Map getInventory()
-
-Returns pet inventories by status
-
-Returns a map of status codes to quantities
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**Map**](integer.md)
-
-### Authorization
-
-[api_key](../README.md#api_key)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a id="getOrderById"></a>
-# **getOrderById**
-> Order getOrderById(orderId)
-
-Find purchase order by ID
-
-For valid response try integer IDs with value &lt;&#x3D; 5 or &gt; 10. Other values will generate exceptions
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **orderId** | **Long**| ID of pet that needs to be fetched | [default to null]
-
-### Return type
-
-[**Order**](Order.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/xml, application/json
-
-<a id="placeOrder"></a>
-# **placeOrder**
-> Order placeOrder(order)
-
-Place an order for a pet
-
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **order** | [**Order**](Order.md)| order placed for purchasing the pet |
-
-### Return type
-
-[**Order**](Order.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/xml, application/json
+void StoreApi::placeOrder(Order order) {
+    // method implementation
+}
 

@@ -1,117 +1,92 @@
-# StoreApi
+/**************************************************************************/
+/*  api.h                                                                 */
+/**************************************************************************/
+/*                         This file is part of:                          */
+/*                             GODOT ENGINE                               */
+/*                        https://godotengine.org                         */
+/**************************************************************************/
+/* Copyright (c) 2014-present Godot Engine contributors (see AUTHORS.md). */
+/* Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.                  */
+/*                                                                        */
+/* Permission is hereby granted, free of charge, to any person obtaining  */
+/* a copy of this software and associated documentation files (the        */
+/* "Software"), to deal in the Software without restriction, including    */
+/* without limitation the rights to use, copy, modify, merge, publish,    */
+/* distribute, sublicense, and/or sell copies of the Software, and to     */
+/* permit persons to whom the Software is furnished to do so, subject to  */
+/* the following conditions:                                              */
+/*                                                                        */
+/* The above copyright notice and this permission notice shall be         */
+/* included in all copies or substantial portions of the Software.        */
+/*                                                                        */
+/* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,        */
+/* EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF     */
+/* MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. */
+/* IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY   */
+/* CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,   */
+/* TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE      */
+/* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                 */
+/**************************************************************************/
 
-All URIs are relative to *http://petstore.swagger.io/v2*
+#ifndef STOREAPI_H
+#define STOREAPI_H
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**deleteOrder**](StoreApi.md#deleteOrder) | **DELETE** /store/order/{orderId} | Delete purchase order by ID
-[**getInventory**](StoreApi.md#getInventory) | **GET** /store/inventory | Returns pet inventories by status
-[**getOrderById**](StoreApi.md#getOrderById) | **GET** /store/order/{orderId} | Find purchase order by ID
-[**placeOrder**](StoreApi.md#placeOrder) | **POST** /store/order | Place an order for a pet
+#include "core/object/ref_counted.h"
 
+class StoreApi : public RefCounted {
+    GDCLASS(StoreApi, RefCounted);
 
-<a id="deleteOrder"></a>
-# **deleteOrder**
-> deleteOrder(orderId)
+    String orderId;
 
-Delete purchase order by ID
+protected:
+    static void _bind_methods();
 
-For valid response try integer IDs with value &lt; 1000. Anything above 1000 or nonintegers will generate API errors
+public:
+    StoreApi();
+    ~StoreApi();
 
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **orderId** | **String**| ID of the order that needs to be deleted | [default to null]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-<a id="getInventory"></a>
-# **getInventory**
-> Map getInventory()
-
-Returns pet inventories by status
-
-Returns a map of status codes to quantities
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**Map**](integer.md)
-
-### Authorization
-
-[api_key](../README.md#api_key)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a id="getOrderById"></a>
-# **getOrderById**
-> Order getOrderById(orderId)
-
-Find purchase order by ID
-
-For valid response try integer IDs with value &lt;&#x3D; 5 or &gt; 10. Other values will generate exceptions
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **orderId** | **Long**| ID of pet that needs to be fetched | [default to null]
-
-### Return type
-
-[**Order**](Order.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/xml, application/json
-
-<a id="placeOrder"></a>
-# **placeOrder**
-> Order placeOrder(order)
-
-Place an order for a pet
+    void deleteOrder(String orderId);
+};
+class StoreApi : public RefCounted {
+    GDCLASS(StoreApi, RefCounted);
 
 
+protected:
+    static void _bind_methods();
 
-### Parameters
+public:
+    StoreApi();
+    ~StoreApi();
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **order** | [**Order**](Order.md)| order placed for purchasing the pet |
+    void getInventory();
+};
+class StoreApi : public RefCounted {
+    GDCLASS(StoreApi, RefCounted);
 
-### Return type
+    Long orderId;
 
-[**Order**](Order.md)
+protected:
+    static void _bind_methods();
 
-### Authorization
+public:
+    StoreApi();
+    ~StoreApi();
 
-No authorization required
+    void getOrderById(Long orderId);
+};
+class StoreApi : public RefCounted {
+    GDCLASS(StoreApi, RefCounted);
 
-### HTTP request headers
+    Order order;
 
- - **Content-Type**: application/json
- - **Accept**: application/xml, application/json
+protected:
+    static void _bind_methods();
 
+public:
+    StoreApi();
+    ~StoreApi();
+
+    void placeOrder(Order order);
+};
+
+#endif // STOREAPI_H

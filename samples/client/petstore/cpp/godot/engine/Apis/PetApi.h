@@ -1,237 +1,154 @@
-# PetApi
+/**************************************************************************/
+/*  api.h                                                                 */
+/**************************************************************************/
+/*                         This file is part of:                          */
+/*                             GODOT ENGINE                               */
+/*                        https://godotengine.org                         */
+/**************************************************************************/
+/* Copyright (c) 2014-present Godot Engine contributors (see AUTHORS.md). */
+/* Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.                  */
+/*                                                                        */
+/* Permission is hereby granted, free of charge, to any person obtaining  */
+/* a copy of this software and associated documentation files (the        */
+/* "Software"), to deal in the Software without restriction, including    */
+/* without limitation the rights to use, copy, modify, merge, publish,    */
+/* distribute, sublicense, and/or sell copies of the Software, and to     */
+/* permit persons to whom the Software is furnished to do so, subject to  */
+/* the following conditions:                                              */
+/*                                                                        */
+/* The above copyright notice and this permission notice shall be         */
+/* included in all copies or substantial portions of the Software.        */
+/*                                                                        */
+/* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,        */
+/* EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF     */
+/* MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. */
+/* IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY   */
+/* CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,   */
+/* TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE      */
+/* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                 */
+/**************************************************************************/
+
+#ifndef PETAPI_H
+#define PETAPI_H
+
+#include "core/object/ref_counted.h"
+
+class PetApi : public RefCounted {
+    GDCLASS(PetApi, RefCounted);
+
+    Pet pet;
+
+protected:
+    static void _bind_methods();
+
+public:
+    PetApi();
+    ~PetApi();
+
+    void addPet(Pet pet);
+};
+class PetApi : public RefCounted {
+    GDCLASS(PetApi, RefCounted);
+
+    Long petId;
+    String apiKey;
+
+protected:
+    static void _bind_methods();
+
+public:
+    PetApi();
+    ~PetApi();
+
+    void deletePet(Long petId, String apiKey);
+};
+class PetApi : public RefCounted {
+    GDCLASS(PetApi, RefCounted);
+
+    List status;
+
+protected:
+    static void _bind_methods();
+
+public:
+    PetApi();
+    ~PetApi();
+
+    void findPetsByStatus(List status);
+};
+class PetApi : public RefCounted {
+    GDCLASS(PetApi, RefCounted);
+
+    List tags;
+
+protected:
+    static void _bind_methods();
+
+public:
+    PetApi();
+    ~PetApi();
+
+    void findPetsByTags(List tags);
+};
+class PetApi : public RefCounted {
+    GDCLASS(PetApi, RefCounted);
+
+    Long petId;
+
+protected:
+    static void _bind_methods();
+
+public:
+    PetApi();
+    ~PetApi();
 
-All URIs are relative to *http://petstore.swagger.io/v2*
+    void getPetById(Long petId);
+};
+class PetApi : public RefCounted {
+    GDCLASS(PetApi, RefCounted);
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**addPet**](PetApi.md#addPet) | **POST** /pet | Add a new pet to the store
-[**deletePet**](PetApi.md#deletePet) | **DELETE** /pet/{petId} | Deletes a pet
-[**findPetsByStatus**](PetApi.md#findPetsByStatus) | **GET** /pet/findByStatus | Finds Pets by status
-[**findPetsByTags**](PetApi.md#findPetsByTags) | **GET** /pet/findByTags | Finds Pets by tags
-[**getPetById**](PetApi.md#getPetById) | **GET** /pet/{petId} | Find pet by ID
-[**updatePet**](PetApi.md#updatePet) | **PUT** /pet | Update an existing pet
-[**updatePetWithForm**](PetApi.md#updatePetWithForm) | **POST** /pet/{petId} | Updates a pet in the store with form data
-[**uploadFile**](PetApi.md#uploadFile) | **POST** /pet/{petId}/uploadImage | uploads an image
+    Pet pet;
 
+protected:
+    static void _bind_methods();
 
-<a id="addPet"></a>
-# **addPet**
-> Pet addPet(pet)
+public:
+    PetApi();
+    ~PetApi();
 
-Add a new pet to the store
+    void updatePet(Pet pet);
+};
+class PetApi : public RefCounted {
+    GDCLASS(PetApi, RefCounted);
 
+    Long petId;
+    String name;
+    String status;
 
+protected:
+    static void _bind_methods();
 
-### Parameters
+public:
+    PetApi();
+    ~PetApi();
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pet** | [**Pet**](Pet.md)| Pet object that needs to be added to the store |
+    void updatePetWithForm(Long petId, String name, String status);
+};
+class PetApi : public RefCounted {
+    GDCLASS(PetApi, RefCounted);
 
-### Return type
+    Long petId;
+    String additionalMetadata;
+    File file;
 
-[**Pet**](Pet.md)
+protected:
+    static void _bind_methods();
 
-### Authorization
+public:
+    PetApi();
+    ~PetApi();
 
-[petstore_auth](../README.md#petstore_auth)
+    void uploadFile(Long petId, String additionalMetadata, File file);
+};
 
-### HTTP request headers
-
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/xml, application/json
-
-<a id="deletePet"></a>
-# **deletePet**
-> deletePet(petId, apiKey)
-
-Deletes a pet
-
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **petId** | **Long**| Pet id to delete | [default to null]
- **apiKey** | **String**|  | [optional] [default to null]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[petstore_auth](../README.md#petstore_auth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-<a id="findPetsByStatus"></a>
-# **findPetsByStatus**
-> List findPetsByStatus(status)
-
-Finds Pets by status
-
-Multiple status values can be provided with comma separated strings
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **status** | [**List**](String.md)| Status values that need to be considered for filter | [default to null] [enum: available, pending, sold]
-
-### Return type
-
-[**List**](Pet.md)
-
-### Authorization
-
-[petstore_auth](../README.md#petstore_auth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/xml, application/json
-
-<a id="findPetsByTags"></a>
-# **findPetsByTags**
-> List findPetsByTags(tags)
-
-Finds Pets by tags
-
-Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tags** | [**List**](String.md)| Tags to filter by | [default to null]
-
-### Return type
-
-[**List**](Pet.md)
-
-### Authorization
-
-[petstore_auth](../README.md#petstore_auth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/xml, application/json
-
-<a id="getPetById"></a>
-# **getPetById**
-> Pet getPetById(petId)
-
-Find pet by ID
-
-Returns a single pet
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **petId** | **Long**| ID of pet to return | [default to null]
-
-### Return type
-
-[**Pet**](Pet.md)
-
-### Authorization
-
-[api_key](../README.md#api_key)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/xml, application/json
-
-<a id="updatePet"></a>
-# **updatePet**
-> Pet updatePet(pet)
-
-Update an existing pet
-
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pet** | [**Pet**](Pet.md)| Pet object that needs to be added to the store |
-
-### Return type
-
-[**Pet**](Pet.md)
-
-### Authorization
-
-[petstore_auth](../README.md#petstore_auth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/xml, application/json
-
-<a id="updatePetWithForm"></a>
-# **updatePetWithForm**
-> updatePetWithForm(petId, name, status)
-
-Updates a pet in the store with form data
-
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **petId** | **Long**| ID of pet that needs to be updated | [default to null]
- **name** | **String**| Updated name of the pet | [optional] [default to null]
- **status** | **String**| Updated status of the pet | [optional] [default to null]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[petstore_auth](../README.md#petstore_auth)
-
-### HTTP request headers
-
- - **Content-Type**: application/x-www-form-urlencoded
- - **Accept**: Not defined
-
-<a id="uploadFile"></a>
-# **uploadFile**
-> ApiResponse uploadFile(petId, additionalMetadata, file)
-
-uploads an image
-
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **petId** | **Long**| ID of pet to update | [default to null]
- **additionalMetadata** | **String**| Additional data to pass to server | [optional] [default to null]
- **file** | **File**| file to upload | [optional] [default to null]
-
-### Return type
-
-[**ApiResponse**](ApiResponse.md)
-
-### Authorization
-
-[petstore_auth](../README.md#petstore_auth)
-
-### HTTP request headers
-
- - **Content-Type**: multipart/form-data
- - **Accept**: application/json
-
+#endif // PETAPI_H
