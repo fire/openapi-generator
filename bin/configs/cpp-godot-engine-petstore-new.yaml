@@ -1,0 +1,6 @@
+generatorName: cpp-godot-engine
+outputDir: samples/client/petstore/cpp/godot/engine
+inputSpec: modules/openapi-generator/src/test/resources/3_0/petstore.yaml
+templateDir: modules/openapi-generator/src/main/resources/cpp-godot-engine
+additionalProperties:
+  hideGenerationTimestamp: "true"
