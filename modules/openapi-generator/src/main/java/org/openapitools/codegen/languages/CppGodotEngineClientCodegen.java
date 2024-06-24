@@ -43,6 +43,7 @@ public class CppGodotEngineClientCodegen extends DefaultCodegen implements Codeg
         apiPackage = "apis";
         modelPackage = "models";
         supportingFiles.add(new SupportingFile("README.mustache", "", "README.md"));
+        supportingFiles.add(new SupportingFile("scsub.mustache", "", "SCsub"));
         supportingFiles.add(new SupportingFile("register_types_cpp.mustache", "", "register_types.cpp"));
         supportingFiles.add(new SupportingFile("register_types_h.mustache", "", "register_types.h"));
         cliOptions.add(new CliOption("app_name", "short name of the application"));
