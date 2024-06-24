@@ -31,14 +31,14 @@
 #include "PetApi.h"
 
 void PetApi::_bind_methods() {
-    ClassDB::bind_method(D_METHOD("addPet", "pet"), &PetApi::addPet);
-    ClassDB::bind_method(D_METHOD("deletePet", "petId, apiKey"), &PetApi::deletePet);
-    ClassDB::bind_method(D_METHOD("findPetsByStatus", "status"), &PetApi::findPetsByStatus);
-    ClassDB::bind_method(D_METHOD("findPetsByTags", "tags"), &PetApi::findPetsByTags);
-    ClassDB::bind_method(D_METHOD("getPetById", "petId"), &PetApi::getPetById);
-    ClassDB::bind_method(D_METHOD("updatePet", "pet"), &PetApi::updatePet);
-    ClassDB::bind_method(D_METHOD("updatePetWithForm", "petId, name, status"), &PetApi::updatePetWithForm);
-    ClassDB::bind_method(D_METHOD("uploadFile", "petId, additionalMetadata, file"), &PetApi::uploadFile);
+        ClassDB::bind_method(D_METHOD("addPet", "pet"), &PetApi::addPet);
+        ClassDB::bind_method(D_METHOD("deletePet", "petId", "apiKey"), &PetApi::deletePet);
+        ClassDB::bind_method(D_METHOD("findPetsByStatus", "status"), &PetApi::findPetsByStatus);
+        ClassDB::bind_method(D_METHOD("findPetsByTags", "tags"), &PetApi::findPetsByTags);
+        ClassDB::bind_method(D_METHOD("getPetById", "petId"), &PetApi::getPetById);
+        ClassDB::bind_method(D_METHOD("updatePet", "pet"), &PetApi::updatePet);
+        ClassDB::bind_method(D_METHOD("updatePetWithForm", "petId", "name", "status"), &PetApi::updatePetWithForm);
+        ClassDB::bind_method(D_METHOD("uploadFile", "petId", "additionalMetadata", "file"), &PetApi::uploadFile);
 }
 
 PetApi::PetApi() {

@@ -31,10 +31,10 @@
 #include "StoreApi.h"
 
 void StoreApi::_bind_methods() {
-    ClassDB::bind_method(D_METHOD("deleteOrder", "orderId"), &StoreApi::deleteOrder);
-    ClassDB::bind_method(D_METHOD("getInventory", ""), &StoreApi::getInventory);
-    ClassDB::bind_method(D_METHOD("getOrderById", "orderId"), &StoreApi::getOrderById);
-    ClassDB::bind_method(D_METHOD("placeOrder", "order"), &StoreApi::placeOrder);
+        ClassDB::bind_method(D_METHOD("deleteOrder", "orderId"), &StoreApi::deleteOrder);
+        ClassDB::bind_method(D_METHOD("getInventory"), &StoreApi::getInventory);
+        ClassDB::bind_method(D_METHOD("getOrderById", "orderId"), &StoreApi::getOrderById);
+        ClassDB::bind_method(D_METHOD("placeOrder", "order"), &StoreApi::placeOrder);
 }
 
 StoreApi::StoreApi() {

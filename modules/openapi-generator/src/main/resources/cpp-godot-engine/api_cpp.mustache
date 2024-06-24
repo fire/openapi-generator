@@ -32,9 +32,9 @@
 
 void {{classname}}::_bind_methods() {
 {{#operations}}
-{{#operation}}
-    ClassDB::bind_method(D_METHOD("{{operationId}}", "{{#allParams}}{{paramName}}{{^-last}}, {{/-last}}{{/allParams}}"), &{{classname}}::{{operationId}});
-{{/operation}}
+    {{#operation}}
+        ClassDB::bind_method(D_METHOD("{{operationId}}"{{#allParams}}, "{{paramName}}"{{/allParams}}), &{{classname}}::{{operationId}});
+    {{/operation}}
 {{/operations}}
 }
 

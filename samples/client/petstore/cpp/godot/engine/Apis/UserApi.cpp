@@ -31,14 +31,14 @@
 #include "UserApi.h"
 
 void UserApi::_bind_methods() {
-    ClassDB::bind_method(D_METHOD("createUser", "user"), &UserApi::createUser);
-    ClassDB::bind_method(D_METHOD("createUsersWithArrayInput", "user"), &UserApi::createUsersWithArrayInput);
-    ClassDB::bind_method(D_METHOD("createUsersWithListInput", "user"), &UserApi::createUsersWithListInput);
-    ClassDB::bind_method(D_METHOD("deleteUser", "username"), &UserApi::deleteUser);
-    ClassDB::bind_method(D_METHOD("getUserByName", "username"), &UserApi::getUserByName);
-    ClassDB::bind_method(D_METHOD("loginUser", "username, password"), &UserApi::loginUser);
-    ClassDB::bind_method(D_METHOD("logoutUser", ""), &UserApi::logoutUser);
-    ClassDB::bind_method(D_METHOD("updateUser", "username, user"), &UserApi::updateUser);
+        ClassDB::bind_method(D_METHOD("createUser", "user"), &UserApi::createUser);
+        ClassDB::bind_method(D_METHOD("createUsersWithArrayInput", "user"), &UserApi::createUsersWithArrayInput);
+        ClassDB::bind_method(D_METHOD("createUsersWithListInput", "user"), &UserApi::createUsersWithListInput);
+        ClassDB::bind_method(D_METHOD("deleteUser", "username"), &UserApi::deleteUser);
+        ClassDB::bind_method(D_METHOD("getUserByName", "username"), &UserApi::getUserByName);
+        ClassDB::bind_method(D_METHOD("loginUser", "username", "password"), &UserApi::loginUser);
+        ClassDB::bind_method(D_METHOD("logoutUser"), &UserApi::logoutUser);
+        ClassDB::bind_method(D_METHOD("updateUser", "username", "user"), &UserApi::updateUser);
 }
 
 UserApi::UserApi() {
